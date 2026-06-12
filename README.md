@@ -60,9 +60,11 @@ Definition:
 
 ## Status
 
-This is the initial architecture scaffold.
+This is the initial architecture scaffold, published as a public portfolio repository:
+
+https://github.com/masirahmd95/dropshipping-business-architecture
 
 Definition:
 - Scaffold: the first usable folder and file structure of a project.
 
-Git tracking has been initialized locally. Remote GitHub publication is the next step once a GitHub repository is created or provided.
+Git tracking is initialized locally and connected to the corrected GitHub remote.
