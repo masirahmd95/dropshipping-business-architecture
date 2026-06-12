@@ -19,6 +19,7 @@ Work:
 - Define integration categories.
 - Define core data model.
 - Define core workflows.
+- Define market trend scouting process before final niche selection.
 - Define product-compliance rules for licensed, generic, original, affiliate, and blocked products.
 - Define verification standards.
 
@@ -33,6 +34,7 @@ Business outcome:
 Work:
 - Confirm ecommerce platform.
 - Confirm supplier sources.
+- Confirm market intelligence sources for Amazon, AliExpress, TikTok Shop, Temu, Google Trends, and supplier research.
 - Confirm whether products are generic, original, authorized licensed goods, affiliate products, or blocked goods.
 - Confirm payment setup.
 - Confirm tax and compliance approach.

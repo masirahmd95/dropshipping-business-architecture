@@ -23,6 +23,7 @@ Definition:
 | Area | Status | Current Default | User Input Needed | Notes |
 |---|---|---|---|---|
 | Ecommerce platform | Pending | Shopify | Confirm platform and country | Affects nearly every other decision |
+| Market intelligence | Active rule | Validate niche using Amazon, AliExpress, TikTok Shop, Temu, Google Trends, and supplier signals before product import | Confirm whether paid tools such as Jungle Scout, Helium 10, AutoDS, or Similarweb are approved | Prevents choosing products from hype alone |
 | Product compliance | Active rule | Generic/original football goods first; official goods only through authorized or affiliate routes | Provide supplier authorization evidence if pursuing official merchandise | Prevents IP, payment, platform, customs, and advertising risk |
 | Supplier source | Pending | Supplier app or direct feed | Provide supplier names/apps | Drives product import, stock sync, and fulfilment |
 | Payment provider | Pending | Shopify Payments or Stripe | Confirm account availability | Depends on country and store platform |
@@ -43,6 +44,7 @@ Definitions:
 - Jurisdiction: a country, state, or region with its own legal or tax rules.
 - Consent: permission from a customer to use their data for a purpose such as marketing.
 - CAPI: conversions API; a server-side way to send conversion events to an ad platform.
+- Hype: short-term attention that may not become profitable demand.
 
 ## Decision Record Template
 

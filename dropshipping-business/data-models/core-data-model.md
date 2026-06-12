@@ -11,6 +11,8 @@ Definition:
 
 | Record | Business Meaning | Important Fields |
 |---|---|---|
+| Market Signal | Evidence that a product or niche may have demand | platform, query/product, category, signal type, metric, source URL, captured date |
+| Product Candidate | Product idea being researched before store import | candidate name, niche cluster, customer problem, platform signals, Temu price floor, supplier count, estimated landed cost, target price, visual demo score, decision status |
 | Product | Item sold in the store | title, description, category, status, supplier, images, SEO fields, publication status |
 | Product Compliance Review | Product approval record before publication | product, supplier, authorization status, IP risk level, protected marks detected, evidence link, allowed territories, allowed channels, reviewer, decision |
 | Variant | Sellable version of a product | SKU, option values, price, compare-at price, cost, weight, barcode |
@@ -41,12 +43,24 @@ Definitions:
 - Click ID: a tracking code from an ad platform that helps connect an ad click to a sale.
 - Authorization status: whether the business can prove it is allowed to sell a product.
 - IP risk level: the risk that a product uses protected intellectual property without permission.
+- Market signal: evidence from a marketplace, search platform, social platform, or supplier source that helps judge demand.
+- Product candidate: a product idea that has not yet been approved for the store catalogue.
+- Price floor: the lowest visible market price customers can easily find for a similar product.
+- Visual demo score: a judgement of how clearly the product benefit can be shown in photos or short video.
 
 ## Relationship Map
 
 ```text
+Market Signal
+-> Product Candidate
+-> Product Compliance Review
+-> Product / Variant
+```
+
+```text
 Supplier
 -> Supplier Product
+-> Product Candidate
 -> Product Compliance Review
 -> Product / Variant
 -> Inventory Snapshot
@@ -76,6 +90,9 @@ Definition:
 ## Data Quality Rules
 
 - A product cannot go live without supplier, cost, price, margin, shipping region, return status, and product category.
+- A product cannot be imported into the catalogue without a product candidate record unless manually approved as an exception.
+- A product candidate should have at least three demand signals before sample ordering unless the user marks it as an experimental test.
+- A product candidate must include price floor, estimated landed cost, target price, compliance risk, return risk, and visual demo score.
 - A product cannot go live without a product compliance review.
 - A product with blocked IP risk cannot be published, advertised, or routed to checkout.
 - A licensed product cannot go live without authorization evidence, allowed territory, and allowed channel records.

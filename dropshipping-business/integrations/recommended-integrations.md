@@ -35,6 +35,7 @@ Definitions:
 | Area | Recommended Direction | Candidate Providers Or Tools | Decision Needed From User |
 |---|---|---|---|
 | Ecommerce platform | Use a scalable commerce platform first | Shopify, Shopify Plus later if needed | Confirm Shopify or another platform |
+| Market intelligence | Track demand signals before niche and product approval | Amazon Best Sellers/Product Opportunity Explorer, Google Trends, TikTok Creative Center, TikTok Shop Seller Center, AliExpress supplier research, DSers, AutoDS, Temu competitor checks, Pinterest Trends, Shopify trend reports | Confirm budget for paid research tools |
 | Product compliance | Add a required product approval gate before products go live | Shopify metafields, product tags, approval workflow, supplier document storage, optional legal/IP review | Confirm whether any official licensed merchandise will be pursued |
 | Supplier sourcing | Use supplier apps or direct supplier feeds | DSers, AutoDS, Spocket, CJdropshipping, Syncee, direct supplier API, CSV feed | Provide preferred suppliers or product niche |
 | Product enrichment | Use AI-assisted internal workflow plus human approval | Codex workflow, Shopify product data, possible PIM later | Confirm product approval process |
@@ -57,6 +58,7 @@ Definitions:
 | Consent/privacy | Manage cookies and marketing consent | Shopify privacy tools, Cookiebot, OneTrust | Confirm target regions |
 
 Definitions:
+- Market intelligence: the process of collecting structured evidence about demand, competitors, prices, suppliers, and customer behavior.
 - PIM: product information management system; a tool for managing product data at scale.
 - Manual review queue: a list of items that require a human decision before continuing.
 - Lifecycle marketing: messages based on where the customer is in the buying journey.

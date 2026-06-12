@@ -13,38 +13,55 @@ This glossary defines the technical and business-system terms used in the projec
 - Authorized reseller: a seller with permission from a brand, distributor, or rights holder to sell specific products.
 - Backend: the hidden part of the system that handles data, rules, integrations, automation, payments, orders, and operations.
 - Backend-first: designing the hidden operating system before branding or visual polish.
+- BSR: best seller rank; a marketplace ranking signal, commonly associated with Amazon, that suggests how well a product sells within a category.
 - Business logic: the rules that tell software how the business should behave.
+- CAC: customer acquisition cost; the cost of getting one paying customer.
 - Cart: the temporary list of products a customer intends to buy.
 - Checkout: the process where a customer confirms shipping, payment, tax, and order details.
 - Counterfeit goods: fake products that imitate protected goods or brands without permission.
 - Data model: the plan for what information the system stores and how records connect.
+- Demand signal: evidence that customers may want a product, such as search growth, bestseller rank, reviews, visible orders, or viral videos.
+- Differentiation: the reason a customer would choose one store or product instead of another.
 - Dropshipping: an ecommerce model where the store sells products and a supplier ships them directly to the customer.
 - Event: something that happens in the system, such as product viewed, cart started, payment failed, or order shipped.
 - Fraud screening: checking whether an order may be risky, fake, or likely to create a dispute.
 - Fulfilment: the process of getting an order shipped to the customer.
 - Generic goods: products that serve a customer need without using protected brand, league, club, event, player, logo, or design rights.
+- GMV: gross merchandise value; the total value of goods sold through a marketplace before deducting refunds, fees, and costs.
+- Gross margin: selling price minus direct product and fulfilment costs before broader business expenses.
+- Health claim: a statement that a product treats, prevents, cures, improves, or diagnoses a health condition.
+- Impulse product: a product customers can understand and decide to buy quickly.
 - Integration: a connection between two software systems.
 - Inventory: the products available to sell.
 - IP: intellectual property; legally protected creations or business identifiers such as trademarks, copyrights, patents, designs, and trade secrets.
+- Landed cost: the full cost to get a product to the customer or fulfilment point, including product cost, shipping, duties, packaging, and handling where relevant.
 - Licensed goods: products sold with permission from the rights holder.
 - Margin: the difference between selling price and cost after considering relevant fees.
+- Market intelligence: structured research about demand, competitors, pricing, suppliers, and customer behavior.
 - Metadata: hidden or structured information about a page or product, often used by search engines, ads, and catalogues.
 - Module: a self-contained part of a system with one main responsibility.
 - Order: the record of what a customer bought.
 - Payment authorization: approval that a payment method can be charged.
 - Payment capture: actually taking the money.
 - Playbook: a reusable step-by-step guide.
+- Price floor: the lowest visible market price customers can easily find for a similar product.
 - Print-on-demand: a fulfilment model where a product is printed only after the customer orders it.
 - Product catalogue: the structured list of products the store sells.
 - Product-compliance gate: a required review step that prevents risky products from being published.
 - Product eligibility: whether a product is allowed to be sold through a platform, payment provider, marketplace, or ad channel.
 - Product handle: the readable part of a product page URL, usually based on the product name.
+- Product saturation: when many sellers offer near-identical products, often forcing prices and margins down.
 - Provider: a company or tool that supplies a function, such as payments, tax, support, or email.
 - Record: stored information about one thing, such as a product, order, customer, or payment.
+- Relative interest: a comparison score rather than exact volume, such as Google Trends' 0 to 100 scale.
+- Review velocity: how quickly a product gains new reviews over time.
 - Rights holder: the person or organization that owns or controls intellectual property.
+- Sample order: an order placed by the business to inspect a product before selling it to customers.
 - Scalable: able to handle growth without rebuilding the whole system.
 - SKU: stock keeping unit; a unique product or variant code.
+- Social commerce: selling products inside or directly through social media platforms.
 - Supplier: the company or platform that provides and ships products.
+- Supplier depth: the number of credible suppliers that can provide similar products with acceptable quality and delivery.
 - Supplier routing: deciding which supplier should fulfil an order.
 - Territory restriction: a rule that limits where a product can be sold, advertised, or shipped.
 - Trademark: a word, phrase, symbol, design, or combination that identifies the source of goods or services.

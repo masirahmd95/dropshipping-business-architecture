@@ -11,6 +11,7 @@ Definition:
 
 | Domain | Business Job | Required Functions |
 |---|---|---|
+| Market intelligence | Decide what is worth testing before importing products | Trend capture, demand signal scoring, competitor price checks, supplier depth checks, niche decision records |
 | Product catalogue | Control what the store sells | Product import, product enrichment, category mapping, images, variants, product status |
 | Product compliance | Prevent risky products from reaching the storefront | IP risk review, authorization evidence, allowed territory, allowed channel, publication approval |
 | Supplier management | Know who fulfils each product | Supplier profiles, supplier cost, fulfilment rules, reliability tracking, supplier priority |
@@ -43,11 +44,16 @@ Definitions:
 - ROAS: return on ad spend.
 - Reconciliation: matching money records across systems so sales, fees, refunds, and payouts agree.
 - IP risk review: checking whether a product may use protected names, logos, designs, people, teams, leagues, events, or brands without permission.
+- Demand signal scoring: comparing evidence from platforms such as Amazon, TikTok Shop, Temu, AliExpress, Google Trends, and supplier data before choosing products.
 
 ## Core Event Chain
 
 ```text
-Supplier product data received
+Market signal captured
+-> product candidate created
+-> demand, price floor, supplier depth, and compliance risk scored
+-> sample order decision made
+-> supplier product data received
 -> product enriched
 -> product compliance review completed
 -> product approved
@@ -75,6 +81,7 @@ The architecture should support these from the start:
 
 - Multiple suppliers for the same product type.
 - Supplier fallback if the first supplier is unavailable.
+- Product candidate scoring before import.
 - Product quality review before publishing.
 - Product compliance review before publishing.
 - Margin protection before product activation.
