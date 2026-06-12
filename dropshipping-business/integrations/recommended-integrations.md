@@ -35,6 +35,7 @@ Definitions:
 | Area | Recommended Direction | Candidate Providers Or Tools | Decision Needed From User |
 |---|---|---|---|
 | Ecommerce platform | Use a scalable commerce platform first | Shopify, Shopify Plus later if needed | Confirm Shopify or another platform |
+| Product compliance | Add a required product approval gate before products go live | Shopify metafields, product tags, approval workflow, supplier document storage, optional legal/IP review | Confirm whether any official licensed merchandise will be pursued |
 | Supplier sourcing | Use supplier apps or direct supplier feeds | DSers, AutoDS, Spocket, CJdropshipping, Syncee, direct supplier API, CSV feed | Provide preferred suppliers or product niche |
 | Product enrichment | Use AI-assisted internal workflow plus human approval | Codex workflow, Shopify product data, possible PIM later | Confirm product approval process |
 | Payments | Use platform-native payments where possible; Stripe if custom/headless | Shopify Payments, Stripe | Confirm store country and payment provider access |

@@ -12,6 +12,7 @@ Definition:
 | Domain | Business Job | Required Functions |
 |---|---|---|
 | Product catalogue | Control what the store sells | Product import, product enrichment, category mapping, images, variants, product status |
+| Product compliance | Prevent risky products from reaching the storefront | IP risk review, authorization evidence, allowed territory, allowed channel, publication approval |
 | Supplier management | Know who fulfils each product | Supplier profiles, supplier cost, fulfilment rules, reliability tracking, supplier priority |
 | Inventory | Avoid selling unavailable items | Stock sync, safety buffers, stockout handling, backorder rules |
 | Pricing | Protect margin | Cost tracking, markup rules, sale pricing, currency rules, fee allowance |
@@ -41,12 +42,15 @@ Definitions:
 - CAC: customer acquisition cost.
 - ROAS: return on ad spend.
 - Reconciliation: matching money records across systems so sales, fees, refunds, and payouts agree.
+- IP risk review: checking whether a product may use protected names, logos, designs, people, teams, leagues, events, or brands without permission.
 
 ## Core Event Chain
 
 ```text
 Supplier product data received
--> product enriched and approved
+-> product enriched
+-> product compliance review completed
+-> product approved
 -> product published to store
 -> customer views product
 -> customer adds to cart
@@ -72,6 +76,7 @@ The architecture should support these from the start:
 - Multiple suppliers for the same product type.
 - Supplier fallback if the first supplier is unavailable.
 - Product quality review before publishing.
+- Product compliance review before publishing.
 - Margin protection before product activation.
 - Stock buffers to reduce overselling.
 - Split shipments when one order uses multiple suppliers.

@@ -23,6 +23,7 @@ Definition:
 | Area | Status | Current Default | User Input Needed | Notes |
 |---|---|---|---|---|
 | Ecommerce platform | Pending | Shopify | Confirm platform and country | Affects nearly every other decision |
+| Product compliance | Active rule | Generic/original football goods first; official goods only through authorized or affiliate routes | Provide supplier authorization evidence if pursuing official merchandise | Prevents IP, payment, platform, customs, and advertising risk |
 | Supplier source | Pending | Supplier app or direct feed | Provide supplier names/apps | Drives product import, stock sync, and fulfilment |
 | Payment provider | Pending | Shopify Payments or Stripe | Confirm account availability | Depends on country and store platform |
 | Fraud controls | Pending | Platform fraud plus manual review | Confirm risk tolerance | Must run before supplier fulfilment |

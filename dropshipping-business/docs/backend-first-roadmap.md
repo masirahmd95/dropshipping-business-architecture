@@ -19,6 +19,7 @@ Work:
 - Define integration categories.
 - Define core data model.
 - Define core workflows.
+- Define product-compliance rules for licensed, generic, original, affiliate, and blocked products.
 - Define verification standards.
 
 Definition:
@@ -32,6 +33,7 @@ Business outcome:
 Work:
 - Confirm ecommerce platform.
 - Confirm supplier sources.
+- Confirm whether products are generic, original, authorized licensed goods, affiliate products, or blocked goods.
 - Confirm payment setup.
 - Confirm tax and compliance approach.
 - Confirm marketing, support, analytics, and accounting tools.
@@ -46,6 +48,7 @@ Business outcome:
 
 Work:
 - Product and supplier records.
+- Product compliance review records.
 - Inventory sync rules.
 - Price and margin rules.
 - Order lifecycle.
