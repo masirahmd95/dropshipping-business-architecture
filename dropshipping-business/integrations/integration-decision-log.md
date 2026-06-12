@@ -23,6 +23,7 @@ Definition:
 | Area | Status | Current Default | User Input Needed | Notes |
 |---|---|---|---|---|
 | Ecommerce platform | Pending | Shopify | Confirm platform and country | Affects nearly every other decision |
+| Multi-store setup | Active rule | Three store tracks share one backend architecture with separate store configurations | Confirm whether stores will be separate Shopify accounts/domains later | Prevents a messy general store while reusing the same operating system |
 | Market intelligence | Active rule | Validate niche using Amazon, AliExpress, TikTok Shop, Temu, Google Trends, and supplier signals before product import | Confirm whether paid tools such as Jungle Scout, Helium 10, AutoDS, or Similarweb are approved | Prevents choosing products from hype alone |
 | Product compliance | Active rule | Generic/original football goods first; official goods only through authorized or affiliate routes | Provide supplier authorization evidence if pursuing official merchandise | Prevents IP, payment, platform, customs, and advertising risk |
 | Supplier source | Pending | Supplier app or direct feed | Provide supplier names/apps | Drives product import, stock sync, and fulfilment |
@@ -45,6 +46,7 @@ Definitions:
 - Consent: permission from a customer to use their data for a purpose such as marketing.
 - CAPI: conversions API; a server-side way to send conversion events to an ad platform.
 - Hype: short-term attention that may not become profitable demand.
+- Store configuration: the rules and settings that make one store different while using the same backend architecture.
 
 ## Decision Record Template
 

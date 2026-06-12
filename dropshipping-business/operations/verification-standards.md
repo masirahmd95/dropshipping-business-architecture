@@ -28,11 +28,14 @@ Definitions:
 - Failed integration calls should create useful errors or alerts.
 - Secrets must not be placed in files.
 - Configuration should use placeholders until real credentials are provided.
+- Multi-store records must include a store ID so products, orders, customers, reports, and support tickets do not blur together.
+- Shared templates should be reused rather than copied into inconsistent versions.
 
 Definitions:
 - Module: a self-contained part of a system with one main job.
 - Log: a written record of what the software did.
 - Configuration: settings that control how the system behaves.
+- Store ID: a unique internal code for one store.
 
 ## Visual Verification Checklist
 
@@ -49,6 +52,7 @@ Check every screen or customer message for:
 - Correct currency, tax, and totals
 - No broken images
 - No overlapping interface elements
+- Store-specific product warnings, dimensions, materials, and limitations visible before checkout
 
 Definitions:
 - Mobile responsiveness: the layout works properly on phones.

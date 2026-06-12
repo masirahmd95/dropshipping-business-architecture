@@ -11,6 +11,8 @@ Definition:
 
 | Record | Business Meaning | Important Fields |
 |---|---|---|
+| Store | One separate store track or live store | store ID, store type, status, country, currency, configuration version, launch stage |
+| Store Configuration | Store-specific settings that adjust the shared backend | store, product lanes, required attributes, blocked products, compliance rules, supplier rules, visual rules |
 | Market Signal | Evidence that a product or niche may have demand | platform, query/product, category, signal type, metric, source URL, captured date |
 | Product Candidate | Product idea being researched before store import | candidate name, niche cluster, customer problem, platform signals, Temu price floor, supplier count, estimated landed cost, target price, visual demo score, decision status |
 | Product | Item sold in the store | title, description, category, status, supplier, images, SEO fields, publication status |
@@ -47,8 +49,17 @@ Definitions:
 - Product candidate: a product idea that has not yet been approved for the store catalogue.
 - Price floor: the lowest visible market price customers can easily find for a similar product.
 - Visual demo score: a judgement of how clearly the product benefit can be shown in photos or short video.
+- Store configuration: settings that adjust the shared backend for one store.
+- Launch stage: the current maturity of a store, such as research, setup, test, live, paused, or closed.
 
 ## Relationship Map
+
+```text
+Store
+-> Store Configuration
+-> Market Signal
+-> Product Candidate
+```
 
 ```text
 Market Signal
@@ -89,7 +100,8 @@ Definition:
 
 ## Data Quality Rules
 
-- A product cannot go live without supplier, cost, price, margin, shipping region, return status, and product category.
+- Every major record should include `store_id` once more than one store exists.
+- A product cannot go live without supplier, cost, price, margin, shipping region, return status, store ID, and product category.
 - A product cannot be imported into the catalogue without a product candidate record unless manually approved as an exception.
 - A product candidate should have at least three demand signals before sample ordering unless the user marks it as an experimental test.
 - A product candidate must include price floor, estimated landed cost, target price, compliance risk, return risk, and visual demo score.

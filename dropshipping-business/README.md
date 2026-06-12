@@ -48,7 +48,9 @@ Branding is last because the business must first have a working operating model.
 ## Key Files
 
 - `backend-architecture/backend-function-map.md`: complete backend function inventory.
+- `backend-architecture/multi-store-backend-architecture.md`: shared backend blueprint for running the three store tracks.
 - `docs/market-trend-scouting-2026-06.md`: current trend research across Amazon, AliExpress, TikTok Shop, Temu, Google Trends, and related signals.
+- `stores/README.md`: store-track index for home/kitchen utility, beauty accessories, and pet accessories.
 - `integrations/recommended-integrations.md`: integration categories, recommended candidates, and user decisions needed.
 - `data-models/core-data-model.md`: the business memory for products, suppliers, orders, payments, tracking, returns, and reporting.
 - `workflows/order-to-fulfilment.md`: core workflow from customer checkout to supplier fulfilment.

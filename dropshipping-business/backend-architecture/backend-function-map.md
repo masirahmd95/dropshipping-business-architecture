@@ -11,6 +11,7 @@ Definition:
 
 | Domain | Business Job | Required Functions |
 |---|---|---|
+| Store management | Keep multiple stores separated and comparable | Store ID, store configuration, store status, store-specific rules, shared reporting structure |
 | Market intelligence | Decide what is worth testing before importing products | Trend capture, demand signal scoring, competitor price checks, supplier depth checks, niche decision records |
 | Product catalogue | Control what the store sells | Product import, product enrichment, category mapping, images, variants, product status |
 | Product compliance | Prevent risky products from reaching the storefront | IP risk review, authorization evidence, allowed territory, allowed channel, publication approval |
@@ -45,11 +46,13 @@ Definitions:
 - Reconciliation: matching money records across systems so sales, fees, refunds, and payouts agree.
 - IP risk review: checking whether a product may use protected names, logos, designs, people, teams, leagues, events, or brands without permission.
 - Demand signal scoring: comparing evidence from platforms such as Amazon, TikTok Shop, Temu, AliExpress, Google Trends, and supplier data before choosing products.
+- Store configuration: settings that define how one store behaves while using the shared backend architecture.
 
 ## Core Event Chain
 
 ```text
-Market signal captured
+Store configuration selected
+-> market signal captured
 -> product candidate created
 -> demand, price floor, supplier depth, and compliance risk scored
 -> sample order decision made

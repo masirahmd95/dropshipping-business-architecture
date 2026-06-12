@@ -40,6 +40,9 @@ This glossary defines the technical and business-system terms used in the projec
 - Market intelligence: structured research about demand, competitors, pricing, suppliers, and customer behavior.
 - Metadata: hidden or structured information about a page or product, often used by search engines, ads, and catalogues.
 - Module: a self-contained part of a system with one main responsibility.
+- Multi-store architecture: one operating model used to run more than one store.
+- Multi-store management: the process of keeping several stores separate, comparable, and reusable without mixing records accidentally.
+- Multi-tenant: one software system serving multiple stores, clients, or business units with separation between them.
 - Order: the record of what a customer bought.
 - Payment authorization: approval that a payment method can be charged.
 - Payment capture: actually taking the money.
@@ -60,6 +63,10 @@ This glossary defines the technical and business-system terms used in the projec
 - Scalable: able to handle growth without rebuilding the whole system.
 - SKU: stock keeping unit; a unique product or variant code.
 - Social commerce: selling products inside or directly through social media platforms.
+- Store configuration: settings that adjust how the same backend behaves for one store.
+- Store ID: a unique internal code for one store.
+- Store profile: a document or record that explains what one store is, what it sells, what it avoids, and how it is verified.
+- Storefront: the customer-facing online shop.
 - Supplier: the company or platform that provides and ships products.
 - Supplier depth: the number of credible suppliers that can provide similar products with acceptable quality and delivery.
 - Supplier routing: deciding which supplier should fulfil an order.
