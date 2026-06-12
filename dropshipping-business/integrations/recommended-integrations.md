@@ -1,0 +1,99 @@
+# Recommended Integration Architecture
+
+## Purpose
+
+This document defines the recommended integration categories for the dropshipping business.
+
+Definition:
+- Integration: a connection between this business system and another software service.
+
+The user will provide or approve final providers. Until then, these are recommended categories and candidate options, not final account decisions.
+
+## Default Platform Assumption
+
+Default assumption for the first architecture pass:
+
+```text
+Shopify-centred commerce backend
++ supplier integration layer
++ analytics and reporting layer
++ marketing and support layer
++ finance and accounting layer
+```
+
+Why:
+- Shopify has mature commerce primitives for products, customers, orders, inventory, checkout, payments, storefronts, webhooks, and app integrations.
+- It can start fast but still support advanced custom apps, APIs, webhooks, customer accounts, checkout extensions, and custom storefront options.
+
+Definitions:
+- Commerce primitives: basic ecommerce building blocks such as products, carts, customers, orders, and payments.
+- Webhook: an automatic message sent from one system to another when something happens.
+- Custom app: software built specifically for this business or store.
+
+## Integration Matrix
+
+| Area | Recommended Direction | Candidate Providers Or Tools | Decision Needed From User |
+|---|---|---|---|
+| Ecommerce platform | Use a scalable commerce platform first | Shopify, Shopify Plus later if needed | Confirm Shopify or another platform |
+| Supplier sourcing | Use supplier apps or direct supplier feeds | DSers, AutoDS, Spocket, CJdropshipping, Syncee, direct supplier API, CSV feed | Provide preferred suppliers or product niche |
+| Product enrichment | Use AI-assisted internal workflow plus human approval | Codex workflow, Shopify product data, possible PIM later | Confirm product approval process |
+| Payments | Use platform-native payments where possible; Stripe if custom/headless | Shopify Payments, Stripe | Confirm store country and payment provider access |
+| Fraud | Use payment/platform fraud tools plus manual review rules | Stripe Radar, Shopify fraud analysis, manual review queue | Confirm risk tolerance |
+| Tax | Use automated tax calculation, not manual spreadsheets | Shopify Tax, Stripe Tax, Avalara, TaxJar | Confirm selling countries and business registration |
+| Shipping rules | Use platform rules plus supplier shipping data | Shopify shipping profiles, supplier shipping tables, carrier tracking tool | Confirm target markets |
+| Tracking | Centralize tracking updates | AfterShip, Track123, supplier tracking API, Shopify order status | Confirm supplier tracking quality |
+| Returns | Use return workflow software if volume grows | Loop Returns, AfterShip Returns, ReturnGO, Shopify returns | Confirm return policy |
+| Support | Use ecommerce-aware support desk | Gorgias, Zendesk, Intercom, Shopify Inbox for early stage | Confirm support channel preference |
+| Email marketing | Use ecommerce lifecycle marketing | Klaviyo, Omnisend, Shopify Email early stage | Confirm email/SMS budget |
+| SMS marketing | Use only where legally and commercially justified | Klaviyo SMS, Attentive, Postscript | Confirm target countries and consent approach |
+| Reviews | Add review collection after fulfilment is stable | Judge.me, Loox, Yotpo, Okendo | Confirm review strategy |
+| Analytics | Track ecommerce events from the start | GA4, Google Tag Manager, Meta Pixel/CAPI, TikTok Pixel, PostHog if product analytics needed | Confirm ad channels |
+| Product feeds | Prepare feeds for shopping channels | Google Merchant Center, Meta Catalog, TikTok Catalog | Confirm sales channels |
+| Accounting | Sync orders, fees, refunds, taxes, payouts | Xero, QuickBooks, A2X | Confirm accounting software |
+| Data warehouse | Add when reporting needs exceed platform dashboards | BigQuery, Snowflake, Airbyte/Fivetran, custom exports | Confirm reporting ambition and budget |
+| Automation | Use automation tools before over-customizing | Shopify Flow, Make, Zapier, n8n | Confirm preferred automation platform |
+| Monitoring | Track backend and integration failures | Sentry, Better Stack, UptimeRobot, platform alerts | Confirm whether custom services will be hosted |
+| Consent/privacy | Manage cookies and marketing consent | Shopify privacy tools, Cookiebot, OneTrust | Confirm target regions |
+
+Definitions:
+- PIM: product information management system; a tool for managing product data at scale.
+- Manual review queue: a list of items that require a human decision before continuing.
+- Lifecycle marketing: messages based on where the customer is in the buying journey.
+- Product feed: structured product data sent to marketplaces or ad platforms.
+- Data warehouse: a central reporting database that combines data from multiple systems.
+
+## Recommended First Stack
+
+Use this as the first working stack unless the user provides different integrations:
+
+1. Shopify for commerce backend, product catalogue, checkout, orders, and customer accounts.
+2. Shopify app or direct supplier feed for product import, inventory, and fulfilment.
+3. Shopify Payments where available, or Stripe for custom payment flows.
+4. Stripe Radar or platform fraud checks for risk screening.
+5. Shopify Tax, Stripe Tax, Avalara, or TaxJar depending on country and scale.
+6. Klaviyo or Omnisend for email lifecycle marketing.
+7. Gorgias or Zendesk for customer support once order volume justifies it.
+8. GA4, Google Tag Manager, Meta Pixel/CAPI, and TikTok Pixel for measurement.
+9. Google Merchant Center and Meta Catalog for product feed distribution.
+10. Xero or QuickBooks with A2X for accounting-grade reconciliation.
+11. Sentry or Better Stack for custom backend monitoring if custom services are built.
+
+Definition:
+- Reconciliation-grade: accurate enough to match financial records across sales, fees, refunds, taxes, and payouts.
+
+## Source Notes
+
+These notes ground the current architecture assumptions:
+
+- Shopify developer docs describe APIs for products, customers, orders, inventory, webhooks, storefronts, customer accounts, checkout extensions, and backend customization.
+- Shopify help describes dropshipping as selling without handling inventory or shipping, while the merchant remains responsible for customer service and order tracking.
+- Shopify help describes shipping profiles as product/location-based shipping rules.
+- Shopify help describes refund flows, partial refunds, restocking, customer notifications, and transaction-fee considerations.
+- Stripe docs describe online payments, hosted checkout, advanced payment integrations, invoices, payment methods, and payment links.
+- Stripe Radar docs describe real-time fraud evaluation, risk settings, rules, reviews, and fraud analytics.
+- Stripe Tax docs describe tax calculation, registrations, filing/remittance, product tax codes, multi-country support, and threshold monitoring.
+- Google Analytics docs recommend ecommerce events such as view item, add to cart, begin checkout, add payment info, purchase, and refund, and recommend DebugView or realtime reports for verification.
+
+## Playbook Lesson
+
+The goal is not to collect tools. The goal is to assign each business responsibility to the right system, then verify that data moves correctly between systems.
