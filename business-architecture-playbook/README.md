@@ -65,3 +65,14 @@ The practical build lives in:
 `../dropshipping-business/`
 
 The reusable lessons live here.
+
+## Current Reusable Methods
+
+- `examples/dropshipping/01-backend-architecture-method.md`
+- `examples/dropshipping/02-licensed-vs-generic-merchandise-method.md`
+- `examples/dropshipping/03-market-trend-research-method.md`
+- `examples/dropshipping/04-multi-store-architecture-method.md`
+- `examples/dropshipping/05-product-validation-engine-method.md`
+
+Definition:
+- Reusable method: a process that can be copied into another business with controlled changes.

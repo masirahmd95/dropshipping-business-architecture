@@ -17,7 +17,7 @@ Beauty tools and skincare-adjacent accessories
 Status:
 
 ```text
-Research
+Validation
 ```
 
 Definition:
@@ -27,13 +27,16 @@ Definition:
 
 This store focuses on beauty organization, routine tools, travel storage, and low-risk personal-care accessories.
 
-Initial product lanes:
+Current product lanes:
 
 - Makeup organizers.
 - Skincare storage.
 - Travel toiletry systems.
 - Lash and brow tools.
 - Hair and scalp accessories that do not make medical claims.
+- Beauty routine accessories.
+- Selected cosmetics after product-file checks.
+- Selected electrical beauty tools after safety-document checks.
 
 ## Why This Store Is Viable
 
@@ -71,11 +74,18 @@ Store-specific compliance checks:
 Definition:
 - Before/after imagery: images or videos comparing a starting state with an ending state. In beauty, these can create claim risk if they imply health or treatment results.
 
+## Related Validation Documents
+
+- `../../docs/beauty-product-validation-2026-06.md`: validation engine and launch rules.
+- `top-100-product-scorecard.md`: ranked product candidates and launch decisions.
+- `../../operations/product-compliance-testing.md`: product-file and compliance testing process.
+- `../../integrations/beauty-supplier-shortlist-2026-06.md`: supplier routes and checks.
+
 ## Blocked At Launch
 
-- Cosmetics applied to the skin.
+- Cosmetics applied to the skin unless ingredient, label, batch, supplier, and claim checks pass.
 - Supplements or ingestibles.
-- Electrical beauty devices.
+- Electrical beauty devices unless safety certification evidence and sample checks pass.
 - Products claiming to treat acne, hair loss, pain, skin conditions, or medical issues.
 - Products with unrealistic before/after claims.
 
@@ -85,10 +95,13 @@ These are research examples, not approved products:
 
 | Candidate | Customer Problem | Why It Fits | Risk To Check |
 |---|---|---|---|
+| Travel cosmetic/toiletry organizer | Travel leakage and clutter | Bundle potential | Zipper and waterproofing quality |
+| Satin bonnet/scrunchie/headband set | Hair protection and styling | Strong bundle fit | Fabric feel and stitching |
+| Heatless curl set | Hair styling convenience | Strong TikTok fit | Claims and material comfort |
+| Makeup headband and wrist wash-band set | Messy face-washing routine | Viral routine use | Absorbency and stitching |
+| Resin claw clips | Easy styling | Current hair accessory trend | Hinge strength and finish |
 | Rotating makeup organizer | Messy beauty storage | Strong visual demo | Plastic quality |
-| Travel toiletry pouch | Travel leakage and clutter | Bundle potential | Zipper quality |
 | Silicone brush cleaning mat | Dirty makeup brushes | Clear routine use | Hygiene claims |
-| Heatless hair accessory set | Hair styling convenience | Strong TikTok fit | Claims and material comfort |
 
 ## Verification
 

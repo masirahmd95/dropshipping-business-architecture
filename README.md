@@ -23,7 +23,23 @@ The repository has two connected tracks:
 
 ## Current Focus
 
-The current phase is backend architecture.
+The current phase is product validation for the first store track:
+
+```text
+beauty_accessories
+```
+
+Definition:
+- Product validation: checking demand, profit, supplier reliability, compliance, and operational fit before selling a product.
+
+The current validation documents are:
+
+- `dropshipping-business/docs/beauty-product-validation-2026-06.md`
+- `dropshipping-business/stores/beauty-accessories/top-100-product-scorecard.md`
+- `dropshipping-business/operations/product-compliance-testing.md`
+- `dropshipping-business/integrations/beauty-supplier-shortlist-2026-06.md`
+
+The wider backend architecture still includes:
 
 That includes:
 

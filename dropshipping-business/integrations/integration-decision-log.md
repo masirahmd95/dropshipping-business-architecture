@@ -11,7 +11,7 @@ Use this file when the user provides preferred providers or account access.
 
 ## Current Status
 
-No providers are final yet.
+No paid providers or real accounts are final yet.
 
 The current default architecture assumes a Shopify-centred commerce backend unless the user chooses another platform.
 
@@ -25,8 +25,8 @@ Definition:
 | Ecommerce platform | Pending | Shopify | Confirm platform and country | Affects nearly every other decision |
 | Multi-store setup | Active rule | Three store tracks share one backend architecture with separate store configurations | Confirm whether stores will be separate Shopify accounts/domains later | Prevents a messy general store while reusing the same operating system |
 | Market intelligence | Active rule | Validate niche using Amazon, AliExpress, TikTok Shop, Temu, Google Trends, and supplier signals before product import | Confirm whether paid tools such as Jungle Scout, Helium 10, AutoDS, or Similarweb are approved | Prevents choosing products from hype alone |
-| Product compliance | Active rule | Generic/original football goods first; official goods only through authorized or affiliate routes | Provide supplier authorization evidence if pursuing official merchandise | Prevents IP, payment, platform, customs, and advertising risk |
-| Supplier source | Pending | Supplier app or direct feed | Provide supplier names/apps | Drives product import, stock sync, and fulfilment |
+| Product compliance | Active rule | Beauty products are separated into simple accessories, skin-contact tools, cosmetics, electrical tools, and high-compliance products | Approve launch countries and supplier document requirements | Prevents unsafe products, risky claims, payment issues, and platform problems |
+| Supplier source | Active shortlist | DSers/CJdropshipping for simple accessories; Shopify Collective/affiliate routes for cosmetics and high-compliance goods | Approve supplier accounts and sample-order budget | Drives product import, stock sync, and fulfilment |
 | Payment provider | Pending | Shopify Payments or Stripe | Confirm account availability | Depends on country and store platform |
 | Fraud controls | Pending | Platform fraud plus manual review | Confirm risk tolerance | Must run before supplier fulfilment |
 | Tax | Pending | Shopify Tax, Stripe Tax, Avalara, or TaxJar | Confirm countries and accountant guidance | Tax varies by jurisdiction |
@@ -70,10 +70,10 @@ Definition:
 
 ## Next User Inputs Needed
 
-1. Product niche or product category.
-2. Supplier names or supplier apps under consideration.
-3. Countries to sell into first.
-4. Ecommerce platform preference.
+1. Countries to sell into first.
+2. Ecommerce platform approval, currently Shopify Basic recommended.
+3. Supplier app/account approval for DSers, CJdropshipping, or alternatives.
+4. Sample-order budget for first launch products.
 5. Payment provider account availability.
 6. Accounting software preference.
 7. Marketing channels planned for launch.
