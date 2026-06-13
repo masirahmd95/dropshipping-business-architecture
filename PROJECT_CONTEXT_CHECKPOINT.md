@@ -156,6 +156,13 @@ Current working state after the user's "proceed" instruction following launch-re
 - Offline control room shows readiness, samples, architecture, CRM, trend engine, and missing launch blockers.
 - Branding and customer-facing storefront design remain deferred.
 
+Current working state after the user's request for 100 product descriptions, cost prices, and product images before sample ordering:
+
+- 100-product pre-sample sourcing catalogue created at `dropshipping-business/stores/beauty-accessories/launch-product-sourcing-catalogue-100.md`.
+- Each candidate has a plain-English item description, target supplier cost range, sample-budget range, compliance lane/decision, and image-reference link.
+- Exact supplier cost and exact supplier product images are still pending because they must be tied to chosen supplier listing URLs before sample orders.
+- Third-party seller images should not be copied into the public GitHub repository without image-use permission.
+
 ## Repository Structure
 
 Current main structure:

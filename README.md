@@ -43,6 +43,7 @@ The current validation documents are:
 - `dropshipping-business/workflows/monthly-product-trend-intelligence.md`
 - `dropshipping-business/stores/beauty-accessories/lead-magnet-and-newsletter-plan.md`
 - `dropshipping-business/stores/beauty-accessories/top-30-sample-order-pack.md`
+- `dropshipping-business/stores/beauty-accessories/launch-product-sourcing-catalogue-100.md`
 - `dropshipping-business/backend-config/README.md`
 - `dropshipping-business/control-room/index.html`
 - `dropshipping-business/docs/launch-readiness-audit-2026-06-13.md`
