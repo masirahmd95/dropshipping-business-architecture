@@ -77,6 +77,12 @@ Latest pushed checkpoint before US and UK backend setup:
 519ca53 Add beauty launch readiness architecture
 ```
 
+Latest pushed checkpoint before customer growth setup:
+
+```text
+0cf1278 Add US UK beauty backend setup
+```
+
 Current working state after the user's "execute next steps" instruction:
 
 - Beauty validation engine document created.
@@ -114,6 +120,29 @@ Current working state after the user's "launch must be in us and uk" instruction
 - Product validation workflow updated with market review before import.
 - Order-to-fulfilment workflow updated with market eligibility and customs checks before supplier routing.
 - Playbook US/UK backend setup method created.
+
+Current working state after the user's CRM, marketing, lead conversion, and trend-system instruction:
+
+- Customer growth and CRM architecture created.
+- Customer growth data model created.
+- Lead-to-customer lifecycle workflow created.
+- Monthly product trend intelligence workflow created.
+- Marketing consent and data privacy checklist created.
+- Beauty lead magnet and newsletter plan created.
+- Lead capture and incentive backend rules created.
+- Marketing lifecycle backend rules created.
+- Monthly trend engine backend rules created.
+- Monthly trend report template created.
+- Customer growth dashboard specification created.
+- Customer growth database schema created.
+- Product trend database schema created.
+- Customer growth integration plan created.
+- Customer growth verification checklist created.
+- Store config updated with customer/lead fields, consent statuses, incentive statuses, and dashboard/admin views.
+- Core data model updated with lead, consent, form submission, lead magnet, incentive, campaign, email event, product interest, trend signal, monthly trend report, product opportunity, and dashboard metric records.
+- Backend function map updated with CRM, lead management, incentives, and product trend intelligence.
+- Integration docs updated to include Shopify Customers, lead forms, Shopify Messaging, discounts, trend intelligence, and growth dashboard.
+- Playbook customer growth and CRM method created.
 
 ## Repository Structure
 
@@ -239,7 +268,7 @@ Recommended cheap scalable stack for validation:
 - Shopify Collective or direct brand partnerships for authorized cosmetics or branded products.
 - Google Sheets or Airtable for early validation tables before building custom dashboards.
 - Google Analytics 4, Google Tag Manager, Meta Pixel, and TikTok Pixel for analytics and attribution.
-- Shopify Email or Klaviyo later for email marketing.
+- Shopify Messaging/Email or Klaviyo later for email marketing.
 - Shopify Inbox or Gorgias later for support.
 - QuickBooks or Xero later for accounting.
 

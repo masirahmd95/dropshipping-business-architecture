@@ -1,0 +1,39 @@
+{
+  "schema_id": "beauty_accessories_product_trend_schema",
+  "store_id": "beauty_accessories",
+  "purpose": "Define database-style records for monthly product trend intelligence and dashboard reporting.",
+  "definitions": {
+    "trend_signal": "Evidence that a product or category may be gaining, holding, or losing demand.",
+    "product_opportunity": "A product idea scored for sampling or rejection.",
+    "dashboard_metric": "A saved number used in a report or dashboard."
+  },
+  "tables": [
+    {
+      "table_name": "product_trend_signals",
+      "primary_key": "trend_signal_id",
+      "fields": ["trend_signal_id", "store_id", "market_id", "product_idea", "category", "source", "metric_name", "metric_value", "score", "captured_at", "source_url"]
+    },
+    {
+      "table_name": "monthly_trend_reports",
+      "primary_key": "trend_report_id",
+      "fields": ["trend_report_id", "store_id", "report_month", "market_scope", "source_summary", "top_products_json", "recommendations_json", "archived_status"]
+    },
+    {
+      "table_name": "product_opportunities",
+      "primary_key": "product_opportunity_id",
+      "fields": ["product_opportunity_id", "trend_report_id", "product_idea", "demand_score", "profit_score", "supplier_score", "compliance_score", "content_score", "total_score", "decision", "next_action"]
+    },
+    {
+      "table_name": "dashboard_metrics",
+      "primary_key": "dashboard_metric_id",
+      "fields": ["dashboard_metric_id", "store_id", "metric_name", "metric_value", "period", "market_id", "source", "status"]
+    }
+  ],
+  "data_quality_rules": [
+    "Every trend signal needs source, market, date, metric, and score.",
+    "Every monthly report needs a source summary.",
+    "Every product opportunity needs a decision label.",
+    "Internal category share must not be labelled as global market share."
+  ],
+  "last_updated": "2026-06-13"
+}

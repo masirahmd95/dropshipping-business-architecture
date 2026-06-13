@@ -21,11 +21,13 @@ This glossary defines the technical and business-system terms used in the projec
 - Control plane: the rule layer that tells business systems what is allowed, blocked, required, or waiting for proof.
 - Counterfeit goods: fake products that imitate protected goods or brands without permission.
 - Country of origin: the country where a product was made, used for customs and duty decisions.
+- CRM: customer relationship management; the system for storing leads, customers, consent, preferences, purchases, and marketing status.
 - Data model: the plan for what information the system stores and how records connect.
 - Demand signal: evidence that customers may want a product, such as search growth, bestseller rank, reviews, visible orders, or viral videos.
 - Differentiation: the reason a customer would choose one store or product instead of another.
 - Dropshipping: an ecommerce model where the store sells products and a supplier ships them directly to the customer.
 - Event: something that happens in the system, such as product viewed, cart started, payment failed, or order shipped.
+- Funnel: the sequence from visitor to lead to customer, showing how many people move through each step.
 - Fraud screening: checking whether an order may be risky, fake, or likely to create a dispute.
 - Fulfilment: the process of getting an order shipped to the customer.
 - Generic goods: products that serve a customer need without using protected brand, league, club, event, player, logo, or design rights.
@@ -33,17 +35,21 @@ This glossary defines the technical and business-system terms used in the projec
 - Gross margin: selling price minus direct product and fulfilment costs before broader business expenses.
 - Health claim: a statement that a product treats, prevents, cures, improves, or diagnoses a health condition.
 - Impulse product: a product customers can understand and decide to buy quickly.
+- Incentive: a reason for a customer to act, such as a discount, free guide, free shipping threshold, or early access.
 - Integration: a connection between two software systems.
 - Inventory: the products available to sell.
 - IP: intellectual property; legally protected creations or business identifiers such as trademarks, copyrights, patents, designs, and trade secrets.
 - Landed cost: the full cost to get a product to the customer or fulfilment point, including product cost, shipping, duties, packaging, and handling where relevant.
 - Launch market: a country or region where customers are allowed to buy from the store.
+- Lead: a person who has shown interest but has not bought yet.
+- Lead magnet: a useful free asset offered in exchange for a sign-up.
 - Licensed goods: products sold with permission from the rights holder.
 - Margin: the difference between selling price and cost after considering relevant fees.
 - Market intelligence: structured research about demand, competitors, pricing, suppliers, and customer behavior.
 - Market eligibility: whether a product is approved, blocked, affiliate-only, or prepare-only for one country or region.
 - Market price: the approved price for one product in one market and currency.
 - Metadata: hidden or structured information about a page or product, often used by search engines, ads, and catalogues.
+- Newsletter: a recurring email sent to subscribers.
 - Module: a self-contained part of a system with one main responsibility.
 - Multi-store architecture: one operating model used to run more than one store.
 - Multi-store management: the process of keeping several stores separate, comparable, and reusable without mixing records accidentally.
@@ -59,6 +65,7 @@ This glossary defines the technical and business-system terms used in the projec
 - Product eligibility: whether a product is allowed to be sold through a platform, payment provider, marketplace, or ad channel.
 - Product handle: the readable part of a product page URL, usually based on the product name.
 - Product saturation: when many sellers offer near-identical products, often forcing prices and margins down.
+- Retention: getting customers to return after the first purchase.
 - Provider: a company or tool that supplies a function, such as payments, tax, support, or email.
 - HS code: an international product classification code used for customs.
 - Record: stored information about one thing, such as a product, order, customer, or payment.

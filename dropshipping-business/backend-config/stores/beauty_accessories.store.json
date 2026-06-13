@@ -67,9 +67,26 @@
     "visual_verification_status",
     "publish_approval_status"
   ],
+  "required_customer_fields": [
+    "store_id",
+    "market_id",
+    "lead_source",
+    "main_interest",
+    "lead_magnet_requested",
+    "marketing_consent_status",
+    "marketing_consent_source",
+    "marketing_consent_timestamp",
+    "privacy_notice_version",
+    "customer_segment",
+    "first_purchase_incentive_status",
+    "unsubscribe_status"
+  ],
   "controlled_statuses": {
     "sample_status": ["not_ordered", "ordered", "received", "passed", "failed", "retest"],
     "market_eligibility": ["pending", "approved", "blocked", "prepare_only", "affiliate_only"],
+    "lead_status": ["new", "subscribed", "engaged", "first_purchase", "repeat_customer", "dormant", "unsubscribed", "deleted"],
+    "consent_status": ["unknown", "granted", "denied", "withdrawn"],
+    "incentive_status": ["draft", "approved", "active", "paused", "expired", "blocked"],
     "publish_approval_status": ["blocked", "draft", "ready_for_visual_check", "approved_for_test_launch", "live", "paused"]
   },
   "admin_views_to_create": [
@@ -81,7 +98,13 @@
     "pricing_review",
     "claims_review",
     "visual_verification_queue",
-    "order_exception_queue"
+    "order_exception_queue",
+    "lead_capture_queue",
+    "consent_review",
+    "campaign_review",
+    "incentive_review",
+    "monthly_trend_report",
+    "growth_dashboard"
   ],
   "launch_collections": [
     "travel_beauty_storage",
@@ -109,6 +132,11 @@
     "order_confirmation",
     "shipping_notification_email",
     "refund_notification_email",
+    "lead_capture_form",
+    "lead_magnet_delivery_email",
+    "weekly_newsletter_email",
+    "incentive_terms_display",
+    "growth_dashboard",
     "customer_account_order_status",
     "shopify_admin_product_view",
     "shopify_admin_order_view"

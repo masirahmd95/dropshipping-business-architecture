@@ -41,14 +41,16 @@ Work:
 - Confirm payment setup.
 - Confirm tax and compliance approach.
 - Confirm marketing, support, analytics, and accounting tools.
+- Confirm CRM, lead capture, email, incentive, and trend dashboard approach.
 
 Definition:
 - Integration: a connection between two systems, such as the store and a payment provider.
 
 Current beauty-store output:
-- Cheapest scalable stack selected as a working assumption: Shopify Basic, DSers/CJdropshipping sample routes, Shopify Payments where available, Shopify Tax settings, Shopify analytics, GA4, GTM, TikTok Pixel, Meta Pixel, Shopify Email, and Shopify Inbox.
+- Cheapest scalable stack selected as a working assumption: Shopify Basic, DSers/CJdropshipping sample routes, Shopify Payments where available, Shopify Tax settings, Shopify analytics, GA4, GTM, TikTok Pixel, Meta Pixel, Shopify Messaging/Email, and Shopify Inbox.
 - United States and United Kingdom are now confirmed as the first launch markets.
 - US and UK backend setup files now define market records, product gates, pricing rules, order routing rules, integration status, and verification checks.
+- Customer growth setup now defines CRM records, lead magnets, weekly newsletter strategy, incentives, lifecycle email flows, monthly trend intelligence, and dashboard requirements.
 - Paid and credential-dependent setup still requires user-controlled account creation.
 
 ## Phase 3: Data And Workflow Design
@@ -66,6 +68,11 @@ Work:
 - Refund and return lifecycle.
 - Customer communication events.
 - Analytics events.
+- CRM and consent records.
+- Lead capture and lead magnet records.
+- Incentive and discount records.
+- Email campaign and email event records.
+- Monthly trend report and product opportunity records.
 
 Definition:
 - Lifecycle: the full journey of something from start to finish, such as an order from checkout to delivery.
@@ -75,6 +82,9 @@ Current beauty-store output:
 - Product validation to launch workflow created.
 - Product file index and sample order plan created for the first launch basket.
 - Core data model now includes market, market eligibility, market price, and tax/duties decision records.
+- Customer growth data model created.
+- Lead-to-customer lifecycle workflow created.
+- Monthly product trend intelligence workflow created.
 
 ## Phase 4: Backend Implementation
 
@@ -90,6 +100,11 @@ Work:
 - Tracking updates.
 - Support ticket routing.
 - Marketing automation triggers.
+- Lead magnet delivery.
+- Weekly newsletter setup.
+- CRM customer segments.
+- Offer and discount guardrails.
+- Monthly trend report process.
 - Reporting dashboard.
 
 Definition:
@@ -98,6 +113,7 @@ Definition:
 Current next implementation gate:
 - Create Shopify account and supplier test accounts outside Git.
 - Configure US and UK market setup from `../backend-config/`.
+- Configure CRM, lead capture, consent, email, incentive, and trend dashboard setup from `../backend-config/`.
 - Order first sample batch.
 - Fill product files with real evidence.
 - Only then prepare Shopify product import and product-page visual verification.

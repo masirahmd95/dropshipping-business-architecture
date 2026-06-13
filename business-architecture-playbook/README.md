@@ -75,6 +75,7 @@ The reusable lessons live here.
 - `examples/dropshipping/05-product-validation-engine-method.md`
 - `examples/dropshipping/06-launch-readiness-method.md`
 - `examples/dropshipping/07-us-uk-backend-setup-method.md`
+- `examples/dropshipping/08-customer-growth-crm-method.md`
 
 Definition:
 - Reusable method: a process that can be copied into another business with controlled changes.

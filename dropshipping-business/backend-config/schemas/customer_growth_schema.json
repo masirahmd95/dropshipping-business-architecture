@@ -1,0 +1,64 @@
+{
+  "schema_id": "beauty_accessories_customer_growth_schema",
+  "store_id": "beauty_accessories",
+  "purpose": "Define database-style records for CRM, leads, consent, campaigns, incentives, and email events.",
+  "definitions": {
+    "schema": "A plan for what fields a database record should contain.",
+    "primary_key": "The stable unique ID for one record.",
+    "foreign_key": "A field that connects one record to another record."
+  },
+  "tables": [
+    {
+      "table_name": "leads",
+      "primary_key": "lead_id",
+      "fields": ["lead_id", "store_id", "email", "market_id", "lead_source", "main_interest", "lead_magnet_id", "lead_status", "created_at"]
+    },
+    {
+      "table_name": "customer_profiles",
+      "primary_key": "customer_id",
+      "fields": ["customer_id", "store_id", "email", "market_id", "order_count", "total_spend", "main_interests", "segment_ids", "last_order_at", "lifetime_value"]
+    },
+    {
+      "table_name": "consent_records",
+      "primary_key": "consent_id",
+      "fields": ["consent_id", "person_id", "person_type", "channel", "consent_status", "consent_source", "consent_timestamp", "privacy_notice_version", "unsubscribe_timestamp"]
+    },
+    {
+      "table_name": "form_submissions",
+      "primary_key": "form_submission_id",
+      "fields": ["form_submission_id", "lead_id", "form_id", "form_location", "answers_json", "source_campaign", "submitted_at"]
+    },
+    {
+      "table_name": "lead_magnets",
+      "primary_key": "lead_magnet_id",
+      "fields": ["lead_magnet_id", "title", "format", "topic", "file_location", "target_segment", "claim_risk", "status"]
+    },
+    {
+      "table_name": "incentives",
+      "primary_key": "incentive_id",
+      "fields": ["incentive_id", "name", "type", "value", "market_id", "margin_gate_status", "expiry_date", "status"]
+    },
+    {
+      "table_name": "campaigns",
+      "primary_key": "campaign_id",
+      "fields": ["campaign_id", "channel", "audience_segment_id", "offer_id", "product_ids", "send_date", "status"]
+    },
+    {
+      "table_name": "email_events",
+      "primary_key": "email_event_id",
+      "fields": ["email_event_id", "campaign_id", "person_id", "sent_at", "delivered_at", "opened_at", "clicked_at", "unsubscribed_at", "purchase_order_id"]
+    },
+    {
+      "table_name": "product_interests",
+      "primary_key": "product_interest_id",
+      "fields": ["product_interest_id", "person_id", "category", "product_id", "source_event", "interest_score", "last_seen_at"]
+    }
+  ],
+  "privacy_rules": [
+    "Do not commit real customer or lead data to Git.",
+    "Store consent separately from general customer profile fields.",
+    "Unsubscribe status must override campaign eligibility.",
+    "Avoid sensitive personal data at launch."
+  ],
+  "last_updated": "2026-06-13"
+}

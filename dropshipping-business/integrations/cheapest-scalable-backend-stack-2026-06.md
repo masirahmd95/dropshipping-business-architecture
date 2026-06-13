@@ -34,11 +34,16 @@ Definition:
 | Analytics | Shopify analytics, GA4, Google Tag Manager | Low-cost measurement foundation | Add data warehouse when reporting becomes multi-channel and manual |
 | Paid social tracking | TikTok Pixel and Meta Pixel | Required before social ads | Add server-side tracking later if ad scale justifies it |
 | Product feeds | Google Merchant Center, Meta Catalog, TikTok Catalog | Needed for shopping/social catalog distribution | Add feed-management app if catalog complexity grows |
-| Email | Shopify Email first | Low-cost early lifecycle messaging | Klaviyo when segmentation and revenue justify it |
+| Email | Shopify Messaging/Email first | Low-cost early lifecycle messaging | Klaviyo when segmentation and revenue justify it |
+| CRM | Shopify Customers first | Already tied to orders, segments, consent, and Shopify marketing | Add Klaviyo/Omnisend CRM depth when lifecycle revenue justifies it |
+| Lead capture | Shopify Forms or native theme forms | Low-cost way to collect email, market, interest, and consent | Add Typeform/quiz app only if quizzes materially improve conversion |
+| Incentives | Shopify discounts | Supports percentage, fixed, buy-X-get-Y, and free shipping discount paths | Add bundle/loyalty app only after offer performance is proven |
 | Support | Shopify Inbox first | Low-cost customer support | Gorgias/Zendesk when support volume grows |
 | Reviews | Judge.me or Shopify-compatible review app later | Reviews matter after fulfilment is reliable | Add after first orders and delivery proof |
 | Accounting | Shopify exports first | Avoids monthly cost before sales | QuickBooks/Xero plus A2X when payouts/fees/refunds become hard to reconcile |
 | Automation | Shopify Flow if plan allows, otherwise manual SOPs and Make/Zapier later | Avoids premature automation spend | Add Make/Zapier/n8n after repeated manual tasks appear |
+| Monthly trend engine | Manual monthly report first | Cheapest way to combine Google Trends, social, marketplace, supplier, and store signals | Automate when repeated reporting takes too much time |
+| Growth dashboard | Shopify analytics plus structured scorecards first | Avoids custom dashboard cost before real data exists | Add Looker Studio/BigQuery when multi-source reporting becomes painful |
 | Monitoring | Shopify/admin alerts first | No custom backend yet | Sentry/Better Stack when custom code or hosted services exist |
 
 Definitions:
@@ -57,6 +62,10 @@ Do not add these until there is a clear business reason:
 - Enterprise tax software.
 - Paid product research tools.
 - Complex automation platform.
+- Custom CRM.
+- Custom dashboard.
+- Paid quiz app.
+- Loyalty app.
 
 Business reason:
 - Extra tools create cost, setup work, data mess, and maintenance before the business has proved demand.
@@ -72,8 +81,11 @@ Supplier apps
 -> Tracking updates
 -> Customer notifications
 -> Analytics and marketing events
+-> CRM segments and lifecycle emails
+-> Lead magnet and incentive records
 -> Support and refund records
 -> Accounting export
+-> Monthly trend report
 ```
 
 Definition:
@@ -89,6 +101,9 @@ Before live setup, confirm:
 - Tax and VAT registration approach.
 - Duties/import-tax approach for cross-border fulfilment.
 - Supplier app accounts.
+- First lead magnet.
+- Welcome discount and free-shipping threshold after margin review.
+- Email sender details and unsubscribe approach.
 - Sample order budget.
 - Domain preference later.
 - Accounting software preference later.
@@ -106,6 +121,9 @@ Operational verification:
 - No paid upgrade is added without trigger.
 - Supplier tools are matched to product risk.
 - High-compliance products use affiliate or authorized route.
+- CRM, lead capture, and email marketing are covered without buying unnecessary software.
+- Incentives have margin gates.
+- Monthly trend engine has a repeatable source list and scoring method.
 
 Backend verification:
 - Each system owns a clear responsibility.

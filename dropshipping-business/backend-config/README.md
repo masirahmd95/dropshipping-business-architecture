@@ -41,8 +41,16 @@ Definitions:
 | `rules/product_launch_gates.json` | Product approval gates before sale |
 | `rules/pricing_margin_rules.json` | Pricing and margin rules for USD and GBP |
 | `rules/order_routing_rules.json` | Order-to-supplier routing and failure handling |
+| `rules/lead_capture_incentive_rules.json` | Lead forms, free assets, and offer guardrails |
+| `rules/marketing_lifecycle_rules.json` | Email flows, customer segments, and suppression rules |
+| `rules/monthly_trend_engine_rules.json` | Monthly product trend scoring and sample recommendations |
 | `integrations/beauty_accessories.integration-plan.json` | Tool stack and integration setup status |
+| `integrations/customer_growth.integration-plan.json` | CRM, lead capture, email, dashboard, and trend-engine integration plan |
+| `analytics/customer_growth_dashboard_spec.json` | Visual dashboard specification for growth metrics |
+| `schemas/customer_growth_schema.json` | Database-style schema for leads, consent, campaigns, incentives, and email events |
+| `schemas/product_trend_schema.json` | Database-style schema for monthly trend signals, product opportunities, and dashboard metrics |
 | `verification/us_uk_backend_setup_verification.md` | Operational, backend, and visual checks |
+| `verification/customer_growth_backend_verification.md` | CRM, marketing, incentive, trend-engine, and dashboard checks |
 
 Definition:
 - Admin view: an internal screen or table used to manage operations.

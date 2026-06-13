@@ -14,8 +14,8 @@ Business meaning:
 ## Normal Flow
 
 ```text
-1. Product idea is captured.
-2. Market signals are recorded.
+1. Product idea is captured from research, customer behaviour, or monthly trend intelligence.
+2. Market and customer signals are recorded.
 3. Product candidate score is calculated.
 4. Compliance lane is assigned.
 5. Supplier routes are shortlisted.
@@ -82,6 +82,7 @@ Definition:
 |---|---|
 | Product idea captured | Product Candidate |
 | Market signals recorded | Market Signal |
+| Customer/trend signal recorded | Product Trend Signal or Product Interest |
 | Score calculated | Product Candidate score fields |
 | Compliance lane assigned | Product Compliance Review |
 | Supplier routes shortlisted | Supplier and Supplier Product |
@@ -124,6 +125,7 @@ Backend verification:
 - Workflow statuses use one consistent list.
 - Every status change has a timestamp and reason.
 - Product candidate and product file are linked.
+- Monthly trend report and product opportunity are linked when the idea came from trend intelligence.
 - Market eligibility records link to product file IDs.
 - Market price records link to product file IDs.
 - Supplier and sample results are linked.

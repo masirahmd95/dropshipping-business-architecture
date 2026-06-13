@@ -35,14 +35,19 @@ Definition:
 | Shipping/tracking | Pending | Supplier tracking plus tracking provider | Confirm US and UK supplier coverage | Tracking quality affects support load |
 | Returns | Pending | Platform returns first, returns app later | Confirm return policy | Must match supplier policies |
 | Support | Pending | Shopify Inbox early, Gorgias/Zendesk later | Confirm support channels | Email/chat/social choices matter |
+| CRM | Active rule | Shopify Customers first, Klaviyo/Omnisend later if justified | Confirm lead fields and customer segments | Stores leads, customers, consent, interests, and lifecycle stage |
+| Lead capture | Active rule | Shopify Forms/native forms first | Confirm first lead magnet | Captures voluntary signups without buying lists |
 | Email marketing | Pending | Klaviyo or Omnisend | Confirm budget and target countries | Consent rules matter |
 | SMS marketing | Pending | Deferred until consent and country rules are clear | Confirm countries and SMS appetite | SMS can create compliance risk |
+| Incentives/offers | Active rule | Shopify discounts with margin gates | Confirm welcome discount and shipping threshold after pricing review | Prevents discounts from destroying margin |
 | Analytics | Pending | GA4, GTM, Meta CAPI, TikTok Pixel | Confirm ad channels | Needed before paid campaigns |
+| Product trend engine | Active rule | Monthly manual report first | Confirm monthly review date and data sources | Feeds new product selection with evidence |
+| Growth dashboard | Active rule | Shopify analytics/scorecards first, Looker Studio later | Confirm dashboard depth | Makes complex backend data easy to interpret |
 | Product feeds | Pending | Google Merchant Center, Meta Catalog | Confirm channels | Needed for shopping ads/catalog ads |
 | Accounting | Pending | Xero or QuickBooks plus A2X if needed | Confirm accounting software | Needed for clean finance records |
 | Data warehouse | Pending | Defer until reporting complexity justifies it | Confirm reporting ambition and budget | Useful after volume or multi-channel data grows |
 | Monitoring | Pending | Platform alerts; Sentry/Better Stack if custom backend exists | Confirm custom services | Needed for hosted custom code |
-| Cheapest scalable stack | Working assumption | Shopify Basic, Shopify Markets, DSers/CJdropshipping, Shopify Payments, Shopify Tax, GA4, GTM, TikTok Pixel, Meta Pixel, Shopify Email, Shopify Inbox | Confirm account setup | Keeps launch cost low without blocking scale |
+| Cheapest scalable stack | Working assumption | Shopify Basic, Shopify Markets, DSers/CJdropshipping, Shopify Payments, Shopify Tax, GA4, GTM, TikTok Pixel, Meta Pixel, Shopify Messaging/Email, Shopify Inbox | Confirm account setup | Keeps launch cost low without blocking scale |
 
 Definitions:
 - Jurisdiction: a country, state, or region with its own legal or tax rules.
@@ -76,8 +81,10 @@ Definition:
 1. Business legal country and trading setup.
 2. Ecommerce platform approval, currently Shopify Basic recommended.
 3. US sales tax and UK VAT handoff to accountant or tax adviser.
-4. Supplier app/account approval for DSers, CJdropshipping, or alternatives.
-5. Sample-order budget for first launch products.
-6. Payment provider account availability.
-7. Accounting software preference.
-8. Marketing channels planned for launch.
+4. First lead magnet choice, currently `7-Day Beauty Organization Reset` recommended.
+5. Welcome discount and free-shipping threshold after margin review.
+6. Supplier app/account approval for DSers, CJdropshipping, or alternatives.
+7. Sample-order budget for first launch products.
+8. Payment provider account availability.
+9. Accounting software preference.
+10. Marketing channels planned for launch.

@@ -26,6 +26,8 @@ Definition:
 | Cosmetics route | Prepare only, Shopify Collective, authorized brand partner, or affiliate-first | Avoids blind cosmetic resale risk |
 | High-compliance route | Affiliate-first or expert-reviewed authorized route only | Avoids drug, device, radiation, and payment-provider risk |
 | Marketing setup | Tracking infrastructure first, paid ads later | Prevents spending before attribution and product proof exist |
+| CRM and lead capture | Shopify Customers, segments, forms, and lead magnet first | Builds owned audience before ad spend |
+| Monthly trend intelligence | Manual monthly report first | Chooses new products using evidence before sampling |
 | Branding | Deferred | Product strategy, backend, supplier proof, compliance, and verification come first |
 
 Definition:
@@ -47,6 +49,7 @@ Definition:
 | Claims gate | Approved and blocked wording is documented | Avoids risky or misleading marketing |
 | Visual gate | Product images, dimensions, materials, usage, and warnings can be shown clearly | Avoids customer confusion and returns |
 | Operations gate | Support, refund, returns, tracking, and complaint paths exist | Avoids customer-service chaos |
+| Growth gate | CRM, consent, lead capture, email, incentives, and trend dashboard rules exist | Makes launch measurable and repeatable |
 
 ## First Launch Basket
 
@@ -93,7 +96,7 @@ Detailed setup boundary:
 | 2 | DSers and CJdropshipping test accounts | Supplier import and sample route |
 | 3 | GA4 and Google Tag Manager | Analytics foundation before traffic |
 | 4 | TikTok Pixel and Meta Pixel | Social attribution before campaigns |
-| 5 | Shopify Email and Shopify Inbox | Low-cost lifecycle and support basics |
+| 5 | Shopify Messaging/Email and Shopify Inbox | Low-cost lifecycle and support basics |
 | 6 | Shopify Payments or approved payment route | Checkout/payment readiness |
 | 7 | Shopify Tax settings | Sales tax logic before checkout |
 | 8 | Shopify Markets | Separates US and UK market, currency, tax, shipping, and checkout behavior |
@@ -132,6 +135,8 @@ This plan tells the backend what must exist before launch:
 - Claims records.
 - Launch decision records.
 - Verification records.
+- Lead, consent, campaign, incentive, and email event records.
+- Monthly trend report and product opportunity records.
 
 Definition:
 - Verification record: stored proof that a check was performed and what the result was.
@@ -145,6 +150,8 @@ Operational verification:
 - Sample budget level is selected before supplier ordering.
 - No high-compliance product enters direct-sale launch.
 - No product can launch in a market without that market's eligibility decision.
+- Lead capture, consent, and unsubscribe path are tested before newsletter launch.
+- Monthly trend report process is ready before adding new products after launch.
 
 Backend verification:
 - Every product has one launch status.
@@ -155,12 +162,15 @@ Backend verification:
 - Every direct-sale product has a sample requirement.
 - Every supplier route has a backup or escalation note.
 - Every deferred product has a reason.
+- CRM and marketing records use controlled statuses.
+- Incentive records include market and margin gate.
 
 Visual verification:
 - Future product pages must show accurate size, material, pack contents, and usage.
 - Future admin screens must show missing product-file evidence clearly.
 - Future customer screens must not hide warnings, cleaning instructions, or product limitations.
 - Future mobile screens must be checked before launch.
+- Future lead forms, lead magnet emails, newsletters, and growth dashboards must be visually checked.
 
 ## Reusable Codex Prompt
 

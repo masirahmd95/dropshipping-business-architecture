@@ -1,0 +1,115 @@
+{
+  "ruleset_id": "beauty_accessories_lead_capture_incentives",
+  "store_id": "beauty_accessories",
+  "purpose": "Capture leads ethically, deliver useful incentives, and protect margin before offers go live.",
+  "definitions": {
+    "lead": "A person who has shown interest but has not bought yet.",
+    "lead_magnet": "A useful free asset offered in exchange for a sign-up.",
+    "incentive": "A reason to take action, such as a discount, PDF, free shipping threshold, or early access."
+  },
+  "required_form_fields": [
+    "email",
+    "country",
+    "main_interest",
+    "marketing_consent",
+    "lead_magnet_requested",
+    "source_campaign"
+  ],
+  "optional_form_fields_later": [
+    "birthday_month",
+    "routine_type",
+    "hair_interest",
+    "travel_frequency",
+    "preferred_product_category"
+  ],
+  "lead_magnets": [
+    {
+      "asset_id": "lm-001",
+      "title": "7-Day Beauty Organization Reset",
+      "format": "pdf",
+      "status": "planned",
+      "target_interests": ["organization", "travel", "routine_tools"],
+      "claim_risk": "low"
+    },
+    {
+      "asset_id": "lm-002",
+      "title": "Travel Beauty Packing Checklist",
+      "format": "pdf",
+      "status": "planned",
+      "target_interests": ["travel", "organization"],
+      "claim_risk": "low"
+    },
+    {
+      "asset_id": "lm-003",
+      "title": "Heatless Hair Routine Cheat Sheet",
+      "format": "pdf",
+      "status": "planned",
+      "target_interests": ["hair_accessories"],
+      "claim_risk": "medium"
+    },
+    {
+      "asset_id": "lm-004",
+      "title": "Brush Cleaning And Replacement Calendar",
+      "format": "pdf",
+      "status": "planned",
+      "target_interests": ["makeup_tools", "routine_tools"],
+      "claim_risk": "low"
+    }
+  ],
+  "incentives": [
+    {
+      "incentive_id": "inc-001",
+      "name": "welcome_discount",
+      "type": "percentage_discount",
+      "recommended_test_value": "10_percent",
+      "markets": ["US", "GB"],
+      "rules": ["one_use_per_customer", "not_stackable", "margin_gate_required"],
+      "status": "planned"
+    },
+    {
+      "incentive_id": "inc-002",
+      "name": "free_shipping_threshold_us",
+      "type": "shipping_discount",
+      "recommended_test_value": "USD_60_to_75_after_margin_review",
+      "markets": ["US"],
+      "rules": ["market_specific", "shipping_cost_gate_required", "not_final_until_supplier_costs_known"],
+      "status": "planned"
+    },
+    {
+      "incentive_id": "inc-003",
+      "name": "free_shipping_threshold_gb",
+      "type": "shipping_discount",
+      "recommended_test_value": "GBP_50_to_65_after_margin_review",
+      "markets": ["GB"],
+      "rules": ["market_specific", "shipping_cost_gate_required", "not_final_until_supplier_costs_known"],
+      "status": "planned"
+    },
+    {
+      "incentive_id": "inc-004",
+      "name": "bundle_offer",
+      "type": "bundle_discount",
+      "recommended_test_value": "buy_related_routine_set_save_after_margin_review",
+      "markets": ["US", "GB"],
+      "rules": ["bundle_margin_gate_required", "approved_products_only"],
+      "status": "planned"
+    },
+    {
+      "incentive_id": "inc-005",
+      "name": "new_arrival_early_access",
+      "type": "access_incentive",
+      "recommended_test_value": "early_access_no_discount_required",
+      "markets": ["US", "GB"],
+      "rules": ["product_launch_gate_required", "subscribed_contacts_only"],
+      "status": "planned"
+    }
+  ],
+  "blocked_lead_capture_methods": [
+    "scraped_email_lists",
+    "purchased_email_lists",
+    "pre_checked_marketing_consent",
+    "forms_collecting_unnecessary_sensitive_data",
+    "lead_magnets_making_medical_or_treatment_claims"
+  ],
+  "approval_rule": "No incentive can become active until consent capture, offer terms, market, margin gate, and visual review pass.",
+  "last_updated": "2026-06-13"
+}

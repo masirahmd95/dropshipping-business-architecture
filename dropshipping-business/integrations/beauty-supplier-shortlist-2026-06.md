@@ -173,7 +173,7 @@ Recommended starting stack:
 | Affiliate-first high-risk route | TikTok Shop affiliate / Amazon Associates | Lets us test demand without direct compliance responsibility |
 | Product validation | Markdown docs now, Airtable/Google Sheets later | Avoid software cost until validation workflow proves itself |
 | Analytics | Shopify analytics, GA4, Google Tag Manager, TikTok Pixel, Meta Pixel | Basic measurement from launch |
-| Email | Shopify Email first | Low-cost early lifecycle messaging |
+| Email | Shopify Messaging/Email first | Low-cost early lifecycle messaging |
 | Support | Shopify Inbox first | Low-cost customer support starting point |
 | Accounting | Shopify exports first, QuickBooks/Xero later | Avoid monthly accounting apps until sales volume requires it |
 

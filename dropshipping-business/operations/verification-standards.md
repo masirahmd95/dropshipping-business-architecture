@@ -21,7 +21,7 @@ Definitions:
 ## Backend Tidiness Checklist
 
 - One module should have one main responsibility.
-- Product, supplier, order, payment, shipment, support, and reporting logic should not be mixed together unnecessarily.
+- Product, supplier, order, payment, shipment, support, CRM, marketing, trend intelligence, and reporting logic should not be mixed together unnecessarily.
 - Names should be plain enough to explain to a non-developer.
 - Duplicate rules should be avoided.
 - Logs should explain what happened and why.
@@ -29,6 +29,8 @@ Definitions:
 - Secrets must not be placed in files.
 - Configuration should use placeholders until real credentials are provided.
 - Multi-store records must include a store ID so products, orders, customers, reports, and support tickets do not blur together.
+- Marketing records must connect lead, consent, campaign, incentive, product interest, and customer/order records without mixing US and UK audiences accidentally.
+- Trend records must connect source, market, score, product opportunity, and product validation decision.
 - Shared templates should be reused rather than copied into inconsistent versions.
 
 Definitions:
@@ -50,6 +52,10 @@ Check every screen or customer message for:
 - Empty states
 - Error states
 - Correct currency, tax, and totals
+- Clear consent wording on lead forms
+- Accurate discount and free-shipping terms
+- Newsletter and email rendering on mobile and desktop
+- Dashboard cards, percentages, warning badges, and empty states
 - No broken images
 - No overlapping interface elements
 - Store-specific product warnings, dimensions, materials, and limitations visible before checkout
@@ -72,7 +78,13 @@ Definitions:
 - Supplier routing sends the right line items to the right supplier.
 - Tracking updates reach the customer.
 - Refunds update order, payment, support, analytics, and accounting records.
+- Lead form creates lead, consent, segment, and analytics records.
+- Lead magnet delivery works.
+- Unsubscribe suppresses marketing emails.
+- Incentives apply only when margin and market rules allow them.
+- Monthly trend report produces product opportunity decisions.
 - Dashboards show revenue, margin, supplier, and order status accurately.
+- Growth dashboards show lead funnel, email performance, offer performance, US/UK split, and trend scores accurately.
 
 Definition:
 - Line item: one product row inside an order.

@@ -37,6 +37,11 @@ The current validation documents are:
 - `dropshipping-business/docs/beauty-product-validation-2026-06.md`
 - `dropshipping-business/docs/beauty-launch-readiness-plan.md`
 - `dropshipping-business/docs/us-uk-launch-backend-setup.md`
+- `dropshipping-business/backend-architecture/customer-growth-crm-architecture.md`
+- `dropshipping-business/data-models/customer-growth-data-model.md`
+- `dropshipping-business/workflows/lead-to-customer-lifecycle.md`
+- `dropshipping-business/workflows/monthly-product-trend-intelligence.md`
+- `dropshipping-business/stores/beauty-accessories/lead-magnet-and-newsletter-plan.md`
 - `dropshipping-business/backend-config/README.md`
 - `dropshipping-business/stores/beauty-accessories/top-100-product-scorecard.md`
 - `dropshipping-business/stores/beauty-accessories/sample-order-plan.md`
@@ -62,6 +67,10 @@ That includes:
 - Returns and refunds
 - Customer support
 - Marketing automation
+- CRM and lead capture
+- Weekly newsletters and lifecycle emails
+- Incentives and offer guardrails
+- Monthly product trend intelligence
 - Analytics and attribution
 - Accounting exports
 - Operational, backend, and visual verification
@@ -74,6 +83,7 @@ Current launch markets:
 Definition:
 - Launch market: a country or region where customers are allowed to buy from the store.
 - Control plane: the backend rule layer that defines what is allowed, blocked, required, or waiting for proof.
+- CRM: customer relationship management; the system for storing leads, customers, consent, preferences, purchases, and marketing status.
 
 Definition:
 - Verification: checking that the system works, stays tidy behind the scenes, and appears visually correct to customers and staff.

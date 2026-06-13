@@ -29,6 +29,19 @@ Definition:
 | Inventory Snapshot | Stock state at a point in time | variant, supplier, available quantity, reserved quantity, sync time |
 | Price Rule | Pricing logic | cost basis, markup, minimum margin, rounding rule, sale rule |
 | Market Price | Approved product price by market | product, market, currency, target price, landed cost, margin, approval status |
+| Lead | Person interested before purchase | email, country, source, interest, consent, lead magnet, lead status |
+| Consent Record | Permission and privacy evidence | person, channel, consent status, source, timestamp, privacy version, unsubscribe date |
+| Form Submission | One submitted form | form ID, lead, form location, answers, source campaign, timestamp |
+| Lead Magnet | Free asset offered for sign-up | asset ID, title, topic, target segment, delivery status |
+| Incentive | Offer used to encourage action | incentive ID, type, value, market, margin gate, expiry, status |
+| Customer Segment | Rule-based customer or lead group | segment ID, rule, market, purpose, active status |
+| Campaign | Marketing activity | campaign ID, channel, audience, offer, products, send date, status |
+| Email Event | Email performance action | campaign, lead/customer, sent, delivered, opened, clicked, unsubscribed, purchased |
+| Product Interest | Evidence a person likes a product/category | person, category, product, source event, score, last seen |
+| Product Trend Signal | Product demand signal captured monthly | product idea, source, metric, market, score, captured date |
+| Monthly Trend Report | Monthly product opportunity output | month, market, top products, recommendations, archived status |
+| Product Opportunity | Trend-backed product idea | opportunity ID, product idea, score, decision, next action |
+| Dashboard Metric | Saved reporting number | metric name, value, period, market, source, status |
 | Customer | Person who buys | name, email, phone, address, consent, lifetime value |
 | Cart | Items before checkout | customer/session, items, discounts, abandoned status |
 | Order | Customer purchase | customer, line items, market, payment status, fulfilment status, total, tax, shipping |
@@ -60,6 +73,12 @@ Definitions:
 - Market eligibility: whether one product is approved, blocked, affiliate-only, or prepare-only for one market.
 - Market price: the approved price for one product in one market and currency.
 - Tax and duties decision: the stored decision about sales tax, VAT, duties, or import tax treatment.
+- Lead: a person who has shown interest but has not bought yet.
+- Consent record: stored proof of whether someone agreed to receive marketing and when.
+- Lead magnet: a useful free asset offered in exchange for a sign-up.
+- Incentive: a discount, free asset, free shipping threshold, or access offer used to encourage action.
+- Customer segment: a rule-based group used for targeting and reporting.
+- Product trend signal: evidence that a product or category may be rising, stable, or declining.
 - Visual demo score: a judgement of how clearly the product benefit can be shown in photos or short video.
 - Store configuration: settings that adjust the shared backend for one store.
 - Launch stage: the current maturity of a store, such as research, setup, test, live, paused, or closed.
@@ -108,11 +127,29 @@ Supplier
 Customer behaviour also creates:
 
 ```text
-Customer or session
+Lead, Customer, or session
+-> Consent Record
+-> Form Submission
+-> Lead Magnet
+-> Customer Segment
+-> Campaign
+-> Email Event
+-> Product Interest
 -> Marketing Event
 -> Analytics Attribution
 -> Order
 -> Reporting
+```
+
+Product trend intelligence creates:
+
+```text
+Product Trend Signal
+-> Monthly Trend Report
+-> Product Opportunity
+-> Product Candidate
+-> Product File
+-> Sample Test
 ```
 
 Definition:
@@ -137,6 +174,9 @@ Definition:
 - A licensed product cannot go live without authorization evidence, allowed territory, and allowed channel records.
 - A variant cannot go live without SKU, supplier SKU, price, cost, and inventory rule.
 - An order cannot route to a supplier until payment, fraud, market eligibility, customs fields, and supplier destination rules allow it.
+- A marketing campaign cannot send without consent status, unsubscribe suppression, audience segment, approved products, and offer margin checks where relevant.
+- A lead magnet cannot collect sensitive data or make medical/treatment claims without review.
+- A monthly product trend report cannot recommend direct sale for blocked or high-compliance products without compliance review.
 - A refund must connect to the original order and payment.
 - A shipment must connect to a supplier order and customer order.
 - Analytics must connect product, order, campaign, and revenue where possible.

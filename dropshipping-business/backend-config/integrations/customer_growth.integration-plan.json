@@ -1,0 +1,58 @@
+{
+  "integration_plan_id": "beauty_accessories_customer_growth_plan",
+  "store_id": "beauty_accessories",
+  "status": "planned_not_connected",
+  "plain_english_summary": "This plan covers CRM, lead capture, email, customer segmentation, incentives, analytics, dashboarding, and monthly product trend intelligence.",
+  "integrations": [
+    {
+      "business_function": "crm_customer_database",
+      "starting_tool": "Shopify Customers",
+      "setup_status": "account_needed",
+      "why": "Stores customers, contact details, orders, tags, segments, and marketing status."
+    },
+    {
+      "business_function": "lead_capture_forms",
+      "starting_tool": "Shopify Forms or compatible form app",
+      "setup_status": "account_needed",
+      "why": "Captures voluntary sign-ups, country, interest, consent, and lead magnet request."
+    },
+    {
+      "business_function": "email_marketing",
+      "starting_tool": "Shopify Messaging/Email",
+      "setup_status": "account_needed",
+      "why": "Low-cost way to start welcome emails and weekly newsletters."
+    },
+    {
+      "business_function": "advanced_lifecycle_marketing",
+      "starting_tool": "Klaviyo or Omnisend later",
+      "setup_status": "deferred",
+      "why": "Useful when segmentation, automation, and email revenue justify extra cost."
+    },
+    {
+      "business_function": "analytics_events",
+      "starting_tool": "GA4 and Google Tag Manager",
+      "setup_status": "account_needed",
+      "why": "Tracks lead, product, cart, checkout, purchase, and campaign behaviour."
+    },
+    {
+      "business_function": "dashboard",
+      "starting_tool": "Shopify analytics plus Looker Studio later",
+      "setup_status": "planned",
+      "why": "Shows conversion, email, offer, and trend performance visually."
+    },
+    {
+      "business_function": "trend_intelligence",
+      "starting_tool": "Monthly manual trend report using Google Trends, marketplace checks, supplier checks, and store data",
+      "setup_status": "planned",
+      "why": "Chooses new products analytically before sampling."
+    },
+    {
+      "business_function": "data_warehouse",
+      "starting_tool": "BigQuery later",
+      "setup_status": "deferred",
+      "why": "Only needed when Shopify, email, ad, supplier, and trend data become too complex for exports."
+    }
+  ],
+  "secrets_policy": "No API keys, passwords, tokens, private customer exports, or real email lists may be committed to this repository.",
+  "last_updated": "2026-06-13"
+}

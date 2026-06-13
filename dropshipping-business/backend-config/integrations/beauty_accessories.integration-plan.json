@@ -60,7 +60,7 @@
     },
     {
       "business_function": "email",
-      "starting_tool": "Shopify Email",
+      "starting_tool": "Shopify Messaging/Email",
       "setup_status": "account_needed",
       "why": "Low-cost starting point for order-adjacent and lifecycle emails."
     },

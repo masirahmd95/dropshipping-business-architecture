@@ -1,0 +1,80 @@
+{
+  "ruleset_id": "beauty_accessories_monthly_trend_engine",
+  "store_id": "beauty_accessories",
+  "purpose": "Generate a monthly product opportunity scorecard using public trend signals, store behaviour, supplier data, margin, and compliance risk.",
+  "definitions": {
+    "trend_signal": "Evidence that a product or category may be gaining, holding, or losing demand.",
+    "opportunity_score": "A 0 to 100 score used to decide whether to sample, watch, reject, or prepare a product.",
+    "internal_category_share": "The percentage of this store's leads, sales, or revenue connected to one category."
+  },
+  "monthly_sources": [
+    "google_trends",
+    "google_trending_now",
+    "tiktok_social_observation",
+    "amazon_bestseller_review_checks",
+    "shopify_trend_reports",
+    "supplier_availability_cost_checks",
+    "store_search_terms",
+    "email_clicks",
+    "product_page_views",
+    "add_to_cart_rate",
+    "support_questions",
+    "refund_return_reasons"
+  ],
+  "score_weights": {
+    "demand_growth": 15,
+    "steady_demand": 10,
+    "profit_potential": 15,
+    "supplier_depth": 10,
+    "operational_fit": 10,
+    "compliance_ease": 10,
+    "content_potential": 10,
+    "customer_signal": 10,
+    "market_fit_us_gb": 5,
+    "differentiation": 5
+  },
+  "decision_bands": [
+    {
+      "min_score": 80,
+      "max_score": 100,
+      "decision": "sample_next"
+    },
+    {
+      "min_score": 65,
+      "max_score": 79,
+      "decision": "watch_or_sample_if_supplier_strong"
+    },
+    {
+      "min_score": 50,
+      "max_score": 64,
+      "decision": "watchlist"
+    },
+    {
+      "min_score": 0,
+      "max_score": 49,
+      "decision": "reject_or_revisit_later"
+    }
+  ],
+  "monthly_outputs": [
+    "top_20_product_opportunities",
+    "top_10_sample_recommendations",
+    "top_10_newsletter_topics",
+    "products_to_pause_or_remove",
+    "bundle_opportunities",
+    "compliance_preparation_list",
+    "us_vs_gb_market_notes",
+    "supplier_risk_notes",
+    "margin_risk_notes",
+    "dashboard_metric_export"
+  ],
+  "blocked_auto_recommendations": [
+    "direct_sale_spf_without_review",
+    "direct_sale_acne_treatment_without_review",
+    "direct_sale_hair_growth_without_review",
+    "direct_sale_teeth_whitening_without_review",
+    "direct_sale_electrical_device_without_safety_documents",
+    "product_with_no_supplier_route",
+    "product_below_margin_floor"
+  ],
+  "last_updated": "2026-06-13"
+}

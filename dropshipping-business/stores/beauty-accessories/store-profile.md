@@ -44,6 +44,7 @@ Current product lanes:
 - Products can be visually demonstrated.
 - Customers often buy routine accessories in sets.
 - The niche has repeat content potential around organization, travel, and routines.
+- Lead magnets can naturally teach organization, travel beauty packing, hair routines, and tool cleaning without making medical claims.
 
 Definition:
 - Content potential: how easily a product can generate useful marketing content such as demos, before/after organization, tutorials, or comparisons.
@@ -86,6 +87,12 @@ Definition:
 - `../../docs/beauty-launch-readiness-plan.md`: launch gates and first launch assumptions.
 - `../../docs/us-uk-launch-backend-setup.md`: US and UK backend setup.
 - `../../backend-config/README.md`: structured backend control plane.
+- `../../backend-architecture/customer-growth-crm-architecture.md`: CRM, lead capture, lifecycle marketing, incentives, and trend intelligence.
+- `../../data-models/customer-growth-data-model.md`: customer growth records.
+- `../../workflows/lead-to-customer-lifecycle.md`: lead conversion workflow.
+- `../../workflows/monthly-product-trend-intelligence.md`: monthly trend intelligence workflow.
+- `lead-magnet-and-newsletter-plan.md`: store-specific lead magnet and newsletter plan.
+- `trend-reports/monthly-trend-report-template.md`: monthly product opportunity report template.
 - `top-100-product-scorecard.md`: ranked product candidates and launch decisions.
 - `sample-order-plan.md`: first controlled sample batch.
 - `product-files/product-file-index.md`: first product proof files.
@@ -126,11 +133,14 @@ Backend tidiness:
 - Every product has `store_id = beauty_accessories`.
 - Every market-sensitive product has `market_eligibility_us` and `market_eligibility_gb`.
 - USD and GBP prices are reviewed separately before publication.
+- Lead, consent, segment, campaign, and incentive records are linked before email campaigns launch.
 - Claim restrictions are recorded before copywriting.
 - Product page cannot publish without compliance decision.
 
 Visual:
 - US and UK versions show the correct currency, shipping promise, and product restrictions.
+- Lead forms and weekly newsletters look clear on desktop and mobile.
+- Dashboard views show trend scores, lead funnel, offer performance, and US/UK split clearly.
 - Product page avoids exaggerated results.
 - Product images show actual contents and size.
 - Instructions do not imply medical or treatment benefits.

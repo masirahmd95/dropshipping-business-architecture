@@ -1,0 +1,117 @@
+{
+  "ruleset_id": "beauty_accessories_marketing_lifecycle",
+  "store_id": "beauty_accessories",
+  "purpose": "Define email and customer lifecycle flows from lead capture to repeat purchase.",
+  "definitions": {
+    "lifecycle_flow": "A sequence of messages based on where the person is in the buying journey.",
+    "trigger": "The event that starts a flow.",
+    "suppression": "Preventing a contact from receiving a message."
+  },
+  "global_rules": [
+    "marketing_consent_required_for_marketing_email",
+    "unsubscribe_overrides_all_marketing_flows",
+    "campaigns_must_use_approved_products_only",
+    "discounts_must_pass_margin_gate",
+    "us_and_gb_segments_must_remain_separable",
+    "medical_or_treatment_claims_are_blocked"
+  ],
+  "flows": [
+    {
+      "flow_id": "flow-001",
+      "name": "welcome_and_lead_magnet",
+      "trigger": "lead_form_submitted",
+      "audience": "new_subscribed_leads",
+      "messages": ["deliver_lead_magnet", "set_expectations", "show_relevant_category", "offer_first_purchase_incentive"],
+      "status": "planned"
+    },
+    {
+      "flow_id": "flow-002",
+      "name": "weekly_product_newsletter",
+      "trigger": "weekly_schedule",
+      "audience": "subscribed_leads_and_customers",
+      "messages": ["routine_tip", "featured_product", "approved_offer", "trend_note"],
+      "status": "planned"
+    },
+    {
+      "flow_id": "flow-003",
+      "name": "new_arrival_alert",
+      "trigger": "product_launch_gate_approved",
+      "audience": "segment_matching_product_interest",
+      "messages": ["product_use_case", "launch_note", "approved_offer_if_available"],
+      "status": "planned"
+    },
+    {
+      "flow_id": "flow-004",
+      "name": "abandoned_cart",
+      "trigger": "cart_or_checkout_abandoned",
+      "audience": "consented_cart_abandoners_where_allowed",
+      "messages": ["cart_reminder", "shipping_return_clarity", "support_prompt"],
+      "status": "planned"
+    },
+    {
+      "flow_id": "flow-005",
+      "name": "post_purchase_education",
+      "trigger": "order_paid_or_delivered",
+      "audience": "customers",
+      "messages": ["usage_tips", "cleaning_or_care", "support_route"],
+      "status": "planned"
+    },
+    {
+      "flow_id": "flow-006",
+      "name": "review_request",
+      "trigger": "delivery_confirmed_plus_buffer",
+      "audience": "delivered_customers",
+      "messages": ["review_request", "support_if_issue"],
+      "status": "planned"
+    },
+    {
+      "flow_id": "flow-007",
+      "name": "cross_sell_bundle",
+      "trigger": "category_purchase",
+      "audience": "customers_with_matching_purchase",
+      "messages": ["related_product", "bundle_offer_if_margin_safe"],
+      "status": "planned"
+    },
+    {
+      "flow_id": "flow-008",
+      "name": "winback",
+      "trigger": "inactive_60_to_90_days",
+      "audience": "dormant_subscribed_leads_or_customers",
+      "messages": ["new_trend_note", "fresh_offer_if_margin_safe", "preference_update"],
+      "status": "planned"
+    }
+  ],
+  "segment_rules": [
+    {
+      "segment_id": "seg-us-leads",
+      "name": "US leads",
+      "rule": "country equals US and subscribed equals true and order_count equals 0"
+    },
+    {
+      "segment_id": "seg-gb-leads",
+      "name": "UK leads",
+      "rule": "country equals GB and subscribed equals true and order_count equals 0"
+    },
+    {
+      "segment_id": "seg-hair-interest",
+      "name": "Hair accessory interest",
+      "rule": "main_interest includes hair_accessories or product_interest includes hair_accessories"
+    },
+    {
+      "segment_id": "seg-travel-interest",
+      "name": "Travel beauty interest",
+      "rule": "main_interest includes travel or product_interest includes travel_beauty_storage"
+    },
+    {
+      "segment_id": "seg-high-intent-non-buyers",
+      "name": "High-intent non-buyers",
+      "rule": "subscribed equals true and clicked_email equals true and viewed_product equals true and order_count equals 0"
+    },
+    {
+      "segment_id": "seg-repeat-customers",
+      "name": "Repeat customers",
+      "rule": "order_count greater_than 1"
+    }
+  ],
+  "last_updated": "2026-06-13"
+}

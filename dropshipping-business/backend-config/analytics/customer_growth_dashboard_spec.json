@@ -1,0 +1,73 @@
+{
+  "dashboard_id": "beauty_accessories_customer_growth_dashboard",
+  "store_id": "beauty_accessories",
+  "purpose": "Show CRM, marketing, conversion, incentives, and product trend intelligence in a visually simple dashboard.",
+  "definitions": {
+    "dashboard": "A visual screen showing important business numbers.",
+    "funnel": "A sequence showing how many people move from one step to the next.",
+    "internal_market_share": "A share of this store's leads, sales, revenue, or category performance, not total global market share."
+  },
+  "audience": "business_owner_and_future_operator",
+  "visual_principles": [
+    "show_percentages_with_plain_labels",
+    "use_cards_for_key_numbers",
+    "use_trend_arrows_for_month_over_month_change",
+    "use_heatmaps_for_product_opportunity_scores",
+    "use_warning_badges_for_compliance_margin_or_supplier_risk",
+    "do_not_show_fake_precision",
+    "distinguish_internal_share_from_external_market_share_estimates"
+  ],
+  "panels": [
+    {
+      "panel_id": "growth_snapshot",
+      "title": "Growth Snapshot",
+      "metrics": ["visitors", "leads", "subscribers", "first_purchases", "repeat_purchases", "revenue"]
+    },
+    {
+      "panel_id": "lead_funnel",
+      "title": "Lead Funnel",
+      "metrics": ["form_views", "form_submissions", "signup_rate", "first_purchase_rate", "lead_to_purchase_days"]
+    },
+    {
+      "panel_id": "email_performance",
+      "title": "Email Performance",
+      "metrics": ["sent", "delivered", "open_rate", "click_rate", "purchase_rate", "unsubscribe_rate", "email_revenue"]
+    },
+    {
+      "panel_id": "market_split",
+      "title": "US vs UK",
+      "metrics": ["leads_by_market", "orders_by_market", "revenue_by_market", "conversion_by_market", "aov_by_market"]
+    },
+    {
+      "panel_id": "product_trend_scores",
+      "title": "Product Trend Scores",
+      "metrics": ["opportunity_score", "demand_growth", "profit_potential", "compliance_ease", "supplier_depth", "decision"]
+    },
+    {
+      "panel_id": "category_share",
+      "title": "Category Share",
+      "metrics": ["lead_share_by_category", "revenue_share_by_category", "order_share_by_category", "email_click_share_by_category"]
+    },
+    {
+      "panel_id": "offer_performance",
+      "title": "Offer Performance",
+      "metrics": ["discount_usage", "free_shipping_usage", "bundle_conversion", "revenue_after_discount", "estimated_margin_after_offer"]
+    },
+    {
+      "panel_id": "backend_alerts",
+      "title": "Backend Alerts",
+      "metrics": ["missing_consent", "failed_email_delivery", "blocked_product_in_campaign", "low_margin_offer", "missing_product_trend_source"]
+    }
+  ],
+  "visual_verification": [
+    "desktop_layout_readable",
+    "mobile_layout_readable",
+    "cards_have_clear_labels",
+    "percentages_show_denominator",
+    "warnings_are_visible",
+    "empty_states_explain_no_data",
+    "loading_states_do_not_shift_layout",
+    "error_states_explain_failed_data_source"
+  ],
+  "last_updated": "2026-06-13"
+}

@@ -26,8 +26,9 @@ Definition:
 14. Tracking number is received.
 15. Customer receives tracking notification.
 16. Shipment status updates until delivered.
-17. Post-purchase marketing and review flows run.
-18. Finance and analytics records update.
+17. Customer profile, product interest, and segment records update.
+18. Post-purchase marketing and review flows run.
+19. Finance, analytics, and CRM records update.
 ```
 
 Definitions:
@@ -67,6 +68,8 @@ Definition:
 - Split supplier orders remain connected to one customer order.
 - Tracking number connects to the correct order and customer.
 - Refunds connect to the original payment.
+- Customer profile updates order count, total spend, category interest, and post-purchase segment.
+- Post-purchase email flows respect consent and unsubscribe status.
 - Failed supplier events create staff alerts.
 - No workflow silently fails.
 

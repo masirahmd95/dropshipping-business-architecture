@@ -49,10 +49,15 @@ Definitions:
 | Tracking | Centralize tracking updates | AfterShip, Track123, supplier tracking API, Shopify order status | Confirm supplier tracking quality |
 | Returns | Use return workflow software if volume grows | Loop Returns, AfterShip Returns, ReturnGO, Shopify returns | Confirm return policy |
 | Support | Use ecommerce-aware support desk | Gorgias, Zendesk, Intercom, Shopify Inbox for early stage | Confirm support channel preference |
-| Email marketing | Use ecommerce lifecycle marketing | Klaviyo, Omnisend, Shopify Email early stage | Confirm email/SMS budget |
+| CRM | Store leads, customers, segments, consent, and lifecycle stage | Shopify Customers first, Klaviyo/Omnisend later | Confirm customer data and email strategy |
+| Lead capture | Capture voluntary sign-ups and lead magnet requests | Shopify Forms, theme forms, Typeform later if quiz-heavy | Confirm first lead magnet |
+| Email marketing | Use ecommerce lifecycle marketing | Klaviyo, Omnisend, Shopify Messaging/Email early stage | Confirm email/SMS budget |
 | SMS marketing | Use only where legally and commercially justified | Klaviyo SMS, Attentive, Postscript | Confirm target countries and consent approach |
+| Incentives and offers | Use margin-checked offers | Shopify discounts, automatic discounts, free shipping discounts, bundle app later | Confirm welcome offer and shipping thresholds after margin review |
 | Reviews | Add review collection after fulfilment is stable | Judge.me, Loox, Yotpo, Okendo | Confirm review strategy |
 | Analytics | Track ecommerce events from the start | GA4, Google Tag Manager, Meta Pixel/CAPI, TikTok Pixel, PostHog if product analytics needed | Confirm ad channels |
+| Growth dashboard | Show CRM, conversion, offer, and product trend metrics clearly | Shopify analytics first, Looker Studio later, BigQuery later | Confirm dashboard depth |
+| Product trend engine | Create monthly product opportunity reports | Google Trends, marketplace checks, social observation, supplier data, store search, email clicks, GA4 | Confirm monthly review cadence |
 | Product feeds | Prepare feeds for shopping channels | Google Merchant Center, Meta Catalog, TikTok Catalog | Confirm sales channels |
 | Accounting | Sync orders, fees, refunds, taxes, payouts | Xero, QuickBooks, A2X | Confirm accounting software |
 | Data warehouse | Add when reporting needs exceed platform dashboards | BigQuery, Snowflake, Airbyte/Fivetran, custom exports | Confirm reporting ambition and budget |
@@ -84,6 +89,8 @@ Use this as the first working stack unless the user provides different integrati
 9. Google Merchant Center and Meta Catalog for product feed distribution.
 10. Xero or QuickBooks with A2X for accounting-grade reconciliation.
 11. Sentry or Better Stack for custom backend monitoring if custom services are built.
+12. Shopify Customers and Shopify Forms/Messaging first for CRM, lead capture, email, and customer segments.
+13. Monthly trend intelligence process using Google Trends, marketplace checks, supplier checks, and store behaviour data.
 
 Definition:
 - Reconciliation-grade: accurate enough to match financial records across sales, fees, refunds, taxes, and payouts.
@@ -96,10 +103,15 @@ These notes ground the current architecture assumptions:
 - Shopify help describes dropshipping as selling without handling inventory or shipping, while the merchant remains responsible for customer service and order tracking.
 - Shopify help describes shipping profiles as product/location-based shipping rules.
 - Shopify help describes refund flows, partial refunds, restocking, customer notifications, and transaction-fee considerations.
+- Shopify help describes customer segments as dynamic, rule-based customer lists that can be used for targeted marketing.
+- Shopify help describes discounts including discount codes, automatic discounts, percentage discounts, monetary discounts, buy-X-get-Y, and free shipping discounts.
+- Shopify help describes Shopify Messaging as email/SMS marketing campaigns and marketing automations from Shopify admin.
 - Stripe docs describe online payments, hosted checkout, advanced payment integrations, invoices, payment methods, and payment links.
 - Stripe Radar docs describe real-time fraud evaluation, risk settings, rules, reviews, and fraud analytics.
 - Stripe Tax docs describe tax calculation, registrations, filing/remittance, product tax codes, multi-country support, and threshold monitoring.
 - Google Analytics docs recommend ecommerce events such as view item, add to cart, begin checkout, add payment info, purchase, and refund, and recommend DebugView or realtime reports for verification.
+- Google Analytics docs include lead-generation events such as generate_lead and recommended ecommerce events such as add_to_cart, begin_checkout, purchase, refund, and select_promotion.
+- Google Trends docs describe Trends data as normalized relative interest and warn it is one data point, not exact sales demand.
 
 ## Playbook Lesson
 

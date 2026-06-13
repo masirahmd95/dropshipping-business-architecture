@@ -53,6 +53,12 @@ Branding is last because the business must first have a working operating model.
 - `docs/beauty-product-validation-2026-06.md`: validation engine for the first beauty store.
 - `docs/beauty-launch-readiness-plan.md`: launch gates, first launch basket, account sequence, and sample budget planning.
 - `docs/us-uk-launch-backend-setup.md`: backend setup for United States and United Kingdom launch.
+- `backend-architecture/customer-growth-crm-architecture.md`: CRM, lead capture, lifecycle marketing, incentives, and trend intelligence architecture.
+- `data-models/customer-growth-data-model.md`: records for leads, customers, consent, campaigns, incentives, and trend reports.
+- `workflows/lead-to-customer-lifecycle.md`: workflow from visitor to lead to customer to repeat customer.
+- `workflows/monthly-product-trend-intelligence.md`: monthly system for choosing new products analytically.
+- `stores/beauty-accessories/lead-magnet-and-newsletter-plan.md`: beauty lead magnet and weekly newsletter plan.
+- `stores/beauty-accessories/trend-reports/monthly-trend-report-template.md`: recurring monthly product opportunity report template.
 - `backend-config/README.md`: structured backend control plane for markets, product gates, pricing, order routing, integrations, and verification.
 - `stores/README.md`: store-track index for home/kitchen utility, beauty accessories, and pet accessories.
 - `stores/beauty-accessories/top-100-product-scorecard.md`: ranked beauty product candidates and launch decisions.

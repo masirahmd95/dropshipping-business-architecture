@@ -30,8 +30,11 @@ Definition:
 | Returns | Handle customer returns | Return request, eligibility rule, return label, restock or no-restock |
 | Refunds | Return money correctly | Full refund, partial refund, store credit, refund reason |
 | Customer support | Resolve issues | Ticket creation, order lookup, customer history, refund/return workflow |
+| CRM and lead management | Store leads, customers, preferences, consent, and lifecycle stage | Lead records, customer profiles, consent records, form submissions, segments, product interests |
 | Marketing automation | Grow repeat sales | Welcome flow, abandoned cart, post-purchase, review request, winback |
+| Incentives and offers | Convert leads and increase basket size without damaging margin | Welcome discount, free shipping threshold, bundle offers, large-order shipping discount, offer margin gate |
 | Analytics | Measure behaviour and sales | Ecommerce events, attribution, conversion tracking, product performance |
+| Product trend intelligence | Choose future products analytically | Monthly trend signals, opportunity scores, product sample recommendations, trend dashboard |
 | Reporting | Manage the business | Revenue, margin, AOV, CAC, ROAS, refund rate, supplier performance |
 | Accounting | Keep finance records clean | Sales export, fees, refunds, tax, payout reconciliation |
 | Compliance | Reduce legal risk | Consent, cookie banner, privacy policy, data retention, customer deletion |
@@ -49,6 +52,7 @@ Definitions:
 - Demand signal scoring: comparing evidence from platforms such as Amazon, TikTok Shop, Temu, AliExpress, Google Trends, and supplier data before choosing products.
 - Store configuration: settings that define how one store behaves while using the shared backend architecture.
 - Market setup: configuring each launch country so products, prices, orders, tax, shipping, and compliance behave correctly by market.
+- CRM: customer relationship management; the system for storing leads, customers, consent, purchases, preferences, and marketing status.
 
 ## Core Event Chain
 
@@ -71,6 +75,9 @@ Store configuration selected
 -> product approved
 -> product published to store
 -> customer views product
+-> lead form or product interest may be captured
+-> customer segment updates
+-> campaign or incentive may be triggered
 -> customer adds to cart
 -> customer checks out
 -> payment is authorized or captured
@@ -81,6 +88,7 @@ Store configuration selected
 -> tracking is received
 -> customer is notified
 -> analytics and finance records update
+-> CRM and marketing records update
 -> support and return workflows remain available
 ```
 
@@ -104,6 +112,8 @@ The architecture should support these from the start:
 - Tracking updates from suppliers or carriers.
 - Refunds and returns connected to finance records.
 - Marketing events connected to customer behaviour.
+- Lead capture, consent, email campaigns, and incentives connected to customers and orders.
+- Monthly product trend reports connected to product validation and sample ordering.
 - Reporting by product, supplier, channel, country, and margin.
 - US and UK market rules from the start, with a path to add more countries later.
 
