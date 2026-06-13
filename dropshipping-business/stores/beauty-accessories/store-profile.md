@@ -92,7 +92,9 @@ Definition:
 - `../../workflows/lead-to-customer-lifecycle.md`: lead conversion workflow.
 - `../../workflows/monthly-product-trend-intelligence.md`: monthly trend intelligence workflow.
 - `lead-magnet-and-newsletter-plan.md`: store-specific lead magnet and newsletter plan.
+- `top-30-sample-order-pack.md`: top 30 sample order operating pack.
 - `trend-reports/monthly-trend-report-template.md`: monthly product opportunity report template.
+- `../../control-room/index.html`: offline backend control room.
 - `top-100-product-scorecard.md`: ranked product candidates and launch decisions.
 - `sample-order-plan.md`: first controlled sample batch.
 - `product-files/product-file-index.md`: first product proof files.

@@ -13,12 +13,15 @@ Business meaning:
 
 ## Recommended Sample Batch
 
-Use a standard sample batch of 10-15 products.
+Use a top-30 sample batch, ordered and inspected in two controlled waves.
 
 Definition:
-- Standard sample batch: enough samples to validate a launch range without wasting money on too many weak products.
+- Controlled wave: a smaller group inside a larger sample plan, used so ordering, tracking, inspection, and cash control do not become chaotic.
 
-## Sample Batch A: First 15 Products
+Business rule:
+- The goal is to test all top 30 products, but still keep evidence tidy product by product.
+
+## Sample Batch A: First 15 Operating Products
 
 | Batch Priority | Product | Compliance Lane | Primary Supplier Route | Backup Route | Product File ID | Sample Status |
 |---:|---|---|---|---|---|---|
@@ -37,6 +40,29 @@ Definition:
 | 13 | Scalp shampoo brush | Lane 2 | CJdropshipping | DSers/Syncee | beauty-013 | Not ordered |
 | 14 | Acrylic lipstick holder | Lane 1 | CJdropshipping | DSers/AppScenic | beauty-014 | Not ordered |
 | 15 | Bandana/scarf hair accessory set | Lane 1 | EPROLO | DSers/Trendsi watchlist | beauty-015 | Not ordered |
+
+Note:
+- `beauty-015` was assigned to the bandana/scarf set in the first sample plan. It remains unchanged to preserve the existing product-file link.
+
+## Sample Batch B: Top-30 Expansion Products
+
+| Batch Priority | Product | Compliance Lane | Primary Supplier Route | Backup Route | Product File ID | Sample Status |
+|---:|---|---|---|---|---|---|
+| 16 | Oversized bow hair clip | Lane 1 | EPROLO | DSers/CJdropshipping | beauty-016 | Not ordered |
+| 17 | Elasticated headband set | Lane 1 | DSers | EPROLO/CJdropshipping | beauty-017 | Not ordered |
+| 18 | Makeup sponge air-dry holder | Lane 1 | DSers | CJdropshipping | beauty-018 | Not ordered |
+| 19 | Lash/brow spoolie set | Lane 2 | DSers | CJdropshipping/Syncee | beauty-019 | Not ordered |
+| 20 | Edge brush and parting comb kit | Lane 1 | CJdropshipping | DSers | beauty-020 | Not ordered |
+| 21 | Satin sleep eye mask | Lane 1 | EPROLO | DSers/CJdropshipping | beauty-021 | Not ordered |
+| 22 | Hair turban towel | Lane 1 | CJdropshipping | DSers/EPROLO | beauty-022 | Not ordered |
+| 23 | Clear TSA cosmetic bag set | Lane 1 | CJdropshipping | DSers/AppScenic | beauty-023 | Not ordered |
+| 24 | Cosmetic mixing palette/spatula | Lane 2 | DSers | CJdropshipping/Syncee | beauty-024 | Not ordered |
+| 25 | Perfume atomizer | Lane 1 | CJdropshipping | DSers | beauty-025 | Not ordered |
+| 26 | Lighted compact mirror | Lane 4 | AppScenic document-led supplier | CJdropshipping documented supplier | beauty-026 | Not ordered |
+| 27 | LED vanity mirror | Lane 4 | AppScenic document-led supplier | Authorized/documented supplier | beauty-027 | Not ordered |
+| 28 | Brow shaping stencil kit | Lane 1 | DSers | CJdropshipping | beauty-028 | Not ordered |
+| 29 | False eyelash applicator kit | Lane 2 | DSers | CJdropshipping/Syncee | beauty-029 | Not ordered |
+| 30 | Empty travel cosmetic containers | Lane 1 | CJdropshipping | DSers/AppScenic | beauty-030 | Not ordered |
 
 Definitions:
 - Primary supplier route: the first supplier path to test.
@@ -109,7 +135,7 @@ For each sample:
 ## Verification Checklist
 
 Operational verification:
-- 15 product files exist or are planned.
+- 30 product files exist or are planned.
 - Every sample has primary and backup supplier route.
 - Every sample has US and UK eligibility pending until proof is complete.
 - Every sample has product-specific inspection criteria.

@@ -41,6 +41,21 @@ Business meaning:
 | beauty-013 | Scalp shampoo brush | Lane 2 | Sample first | Not started | Sample, material softness, claim restrictions | Open product file |
 | beauty-014 | Acrylic lipstick holder | Lane 1 | Direct-sale priority | Not started | Sample, dimensions, scratch check | Open product file |
 | beauty-015 | Bandana/scarf hair accessory set | Lane 1 | Direct-sale priority | Not started | Sample, fabric, print quality, size | Open product file |
+| beauty-016 | Oversized bow hair clip | Lane 1 | Direct-sale priority | Not started | Sample, fabric stiffness, clip strength, size | Open product file |
+| beauty-017 | Elasticated headband set | Lane 1 | Direct-sale priority | Not started | Sample, stretch, stitching, comfort | Open product file |
+| beauty-018 | Makeup sponge air-dry holder | Lane 1 | Direct-sale priority | Not started | Sample, size, stability, cleaning notes | Open product file |
+| beauty-019 | Lash/brow spoolie set | Lane 2 | Sample first | Not started | Sample, skin/eye-adjacent material, hygiene packaging | Open product file |
+| beauty-020 | Edge brush and parting comb kit | Lane 1 | Direct-sale priority | Not started | Sample, bristle quality, comb finish, packaging | Open product file |
+| beauty-021 | Satin sleep eye mask | Lane 1 | Direct-sale priority | Not started | Sample, fabric feel, stitching, strap comfort | Open product file |
+| beauty-022 | Hair turban towel | Lane 1 | Direct-sale priority | Not started | Sample, absorbency, button/loop strength, size | Open product file |
+| beauty-023 | Clear TSA cosmetic bag set | Lane 1 | Direct-sale priority | Not started | Sample, zipper, seam, size, plastic smell | Open product file |
+| beauty-024 | Cosmetic mixing palette/spatula | Lane 2 | Sample first | Not started | Sample, material, edge smoothness, cleaning instructions | Open product file |
+| beauty-025 | Perfume atomizer | Lane 1 | Direct-sale priority | Not started | Sample, leakage, spray function, capacity | Open product file |
+| beauty-026 | Lighted compact mirror | Lane 4 | Sample first | Not started | Sample, safety document request, battery/charging, warning label | Open product file |
+| beauty-027 | LED vanity mirror | Lane 4 | Sample first | Not started | Sample, safety document request, plug/voltage, manual, warning label | Open product file |
+| beauty-028 | Brow shaping stencil kit | Lane 1 | Direct-sale priority | Not started | Sample, stencil flexibility, size range, packaging | Open product file |
+| beauty-029 | False eyelash applicator kit | Lane 2 | Sample first | Not started | Sample, eye-adjacent material, edge smoothness, hygiene packaging | Open product file |
+| beauty-030 | Empty travel cosmetic containers | Lane 1 | Direct-sale priority | Not started | Sample, leak test, material, volume accuracy | Open product file |
 
 ## Market Eligibility Status
 
@@ -67,6 +82,21 @@ Current rule:
 | beauty-013 | Scalp shampoo brush | Pending | Pending | Supplier route, sample, material softness, country of origin, USD/GBP pricing |
 | beauty-014 | Acrylic lipstick holder | Pending | Pending | Supplier route, sample, dimensions, country of origin, USD/GBP pricing |
 | beauty-015 | Bandana/scarf hair accessory set | Pending | Pending | Supplier route, sample, fabric notes, country of origin, USD/GBP pricing |
+| beauty-016 | Oversized bow hair clip | Pending | Pending | Supplier route, sample, clip strength, country of origin, USD/GBP pricing |
+| beauty-017 | Elasticated headband set | Pending | Pending | Supplier route, sample, stretch and comfort notes, country of origin, USD/GBP pricing |
+| beauty-018 | Makeup sponge air-dry holder | Pending | Pending | Supplier route, sample, material notes, country of origin, USD/GBP pricing |
+| beauty-019 | Lash/brow spoolie set | Pending | Pending | Supplier route, sample, hygiene packaging, country of origin, USD/GBP pricing |
+| beauty-020 | Edge brush and parting comb kit | Pending | Pending | Supplier route, sample, bristle and comb notes, country of origin, USD/GBP pricing |
+| beauty-021 | Satin sleep eye mask | Pending | Pending | Supplier route, sample, fabric and strap notes, country of origin, USD/GBP pricing |
+| beauty-022 | Hair turban towel | Pending | Pending | Supplier route, sample, absorbency and size notes, country of origin, USD/GBP pricing |
+| beauty-023 | Clear TSA cosmetic bag set | Pending | Pending | Supplier route, sample, zipper and size notes, country of origin, USD/GBP pricing |
+| beauty-024 | Cosmetic mixing palette/spatula | Pending | Pending | Supplier route, sample, material and cleaning notes, country of origin, USD/GBP pricing |
+| beauty-025 | Perfume atomizer | Pending | Pending | Supplier route, sample, leakage test, country of origin, USD/GBP pricing |
+| beauty-026 | Lighted compact mirror | Pending | Pending | Supplier route, sample, safety documents, battery/charging notes, country of origin, USD/GBP pricing |
+| beauty-027 | LED vanity mirror | Pending | Pending | Supplier route, sample, safety documents, plug/voltage notes, country of origin, USD/GBP pricing |
+| beauty-028 | Brow shaping stencil kit | Pending | Pending | Supplier route, sample, size range notes, country of origin, USD/GBP pricing |
+| beauty-029 | False eyelash applicator kit | Pending | Pending | Supplier route, sample, eye-adjacent material notes, country of origin, USD/GBP pricing |
+| beauty-030 | Empty travel cosmetic containers | Pending | Pending | Supplier route, sample, leak test, country of origin, USD/GBP pricing |
 
 ## Rules
 
@@ -82,7 +112,7 @@ Definition:
 ## Verification Checklist
 
 Operational verification:
-- Every first-batch product has a product file ID.
+- Every top-30 sample product has a product file ID.
 - Every product file has missing evidence listed.
 - Every product file has a next action.
 - Every product file has US and UK eligibility status.

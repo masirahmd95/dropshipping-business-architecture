@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beauty Backend Control Room</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">Offline backend control room</p>
+      <h1>Beauty Dropshipping Launch System</h1>
+      <p class="subhead">US and UK launch architecture, sample pack, CRM, trend engine, and launch blockers.</p>
+    </div>
+    <div class="header-status" aria-label="Launch status">
+      <span class="status-dot"></span>
+      <span>Architecture ready, not launch ready</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="summary-grid" aria-label="Readiness summary">
+      <article class="metric-card">
+        <span class="metric-label">Overall launch readiness</span>
+        <strong id="overallReadiness">0%</strong>
+        <div class="meter"><span style="width: 38%"></span></div>
+        <p>Samples, accounts, tax, and live setup are still missing.</p>
+      </article>
+      <article class="metric-card">
+        <span class="metric-label">Top samples</span>
+        <strong id="sampleTotal">30</strong>
+        <p>All sample statuses are currently not ordered.</p>
+      </article>
+      <article class="metric-card">
+        <span class="metric-label">Direct-sale after sample</span>
+        <strong id="directSaleCount">22</strong>
+        <p>Low-compliance products still need physical proof.</p>
+      </article>
+      <article class="metric-card warning">
+        <span class="metric-label">Blocked before launch</span>
+        <strong id="blockerCount">12</strong>
+        <p>Critical live-account and evidence tasks remain open.</p>
+      </article>
+    </section>
+
+    <nav class="tabs" aria-label="Dashboard sections">
+      <button class="tab active" data-panel="readiness">Readiness</button>
+      <button class="tab" data-panel="samples">Samples</button>
+      <button class="tab" data-panel="architecture">Architecture</button>
+      <button class="tab" data-panel="crm">CRM</button>
+      <button class="tab" data-panel="trends">Trends</button>
+      <button class="tab" data-panel="missing">Missing</button>
+    </nav>
+
+    <section id="readiness" class="panel active">
+      <div class="section-header">
+        <div>
+          <h2>Launch Readiness</h2>
+          <p>Definition: launch readiness means products, suppliers, systems, customer support, compliance, and visual checks are proven before customers can buy.</p>
+        </div>
+      </div>
+      <div id="readinessGrid" class="readiness-grid"></div>
+    </section>
+
+    <section id="samples" class="panel">
+      <div class="section-header">
+        <div>
+          <h2>Top 30 Sample Pack</h2>
+          <p>Definition: sample order means buying the product before selling it, so quality and delivery can be checked.</p>
+        </div>
+        <div class="sample-tools">
+          <label for="sampleSearch">Search</label>
+          <input id="sampleSearch" type="search" placeholder="Product, supplier, lane">
+          <select id="laneFilter" aria-label="Filter by compliance lane">
+            <option value="all">All lanes</option>
+            <option value="Lane 1">Lane 1</option>
+            <option value="Lane 2">Lane 2</option>
+            <option value="Lane 4">Lane 4</option>
+          </select>
+        </div>
+      </div>
+      <div class="sample-summary" id="sampleSummary"></div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Product</th>
+              <th>Lane</th>
+              <th>Decision</th>
+              <th>Primary Route</th>
+              <th>US/UK</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="sampleRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="architecture" class="panel">
+      <div class="section-header">
+        <div>
+          <h2>Backend Architecture</h2>
+          <p>Definition: backend architecture is the hidden system of records, rules, workflows, and integrations that run the business.</p>
+        </div>
+      </div>
+      <div id="architectureGrid" class="architecture-grid"></div>
+    </section>
+
+    <section id="crm" class="panel">
+      <div class="section-header">
+        <div>
+          <h2>CRM And Lead Conversion</h2>
+          <p>Definition: CRM means customer relationship management, the records for leads, customers, consent, interests, purchases, and marketing status.</p>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="plain-panel">
+          <h3>Lifecycle Flows</h3>
+          <ul id="crmFlows"></ul>
+        </div>
+        <div class="plain-panel">
+          <h3>Lead Magnets And Offers</h3>
+          <ul id="leadMagnets"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="trends" class="panel">
+      <div class="section-header">
+        <div>
+          <h2>Monthly Trend Engine</h2>
+          <p>Definition: trend intelligence is the repeatable process for collecting signals and choosing what to sample next.</p>
+        </div>
+      </div>
+      <div class="trend-layout">
+        <div class="plain-panel">
+          <h3>Score Weights</h3>
+          <div id="trendWeights"></div>
+        </div>
+        <div class="plain-panel">
+          <h3>Monthly Outputs</h3>
+          <ul id="trendOutputs"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="missing" class="panel">
+      <div class="section-header">
+        <div>
+          <h2>Missing Before Launch</h2>
+          <p>These items block launch. Branding and customer-facing design are intentionally left until the end.</p>
+        </div>
+      </div>
+      <div id="missingList" class="missing-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Offline control room. No live accounts, customer data, or credentials are stored here.</span>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

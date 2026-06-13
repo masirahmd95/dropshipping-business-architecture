@@ -47,6 +47,7 @@ Definitions:
 | `integrations/beauty_accessories.integration-plan.json` | Tool stack and integration setup status |
 | `integrations/customer_growth.integration-plan.json` | CRM, lead capture, email, dashboard, and trend-engine integration plan |
 | `analytics/customer_growth_dashboard_spec.json` | Visual dashboard specification for growth metrics |
+| `samples/top_30_sample_pack.json` | Structured data for the top 30 beauty sample order pack |
 | `schemas/customer_growth_schema.json` | Database-style schema for leads, consent, campaigns, incentives, and email events |
 | `schemas/product_trend_schema.json` | Database-style schema for monthly trend signals, product opportunities, and dashboard metrics |
 | `verification/us_uk_backend_setup_verification.md` | Operational, backend, and visual checks |

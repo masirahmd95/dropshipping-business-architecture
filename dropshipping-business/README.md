@@ -59,6 +59,9 @@ Branding is last because the business must first have a working operating model.
 - `workflows/monthly-product-trend-intelligence.md`: monthly system for choosing new products analytically.
 - `stores/beauty-accessories/lead-magnet-and-newsletter-plan.md`: beauty lead magnet and weekly newsletter plan.
 - `stores/beauty-accessories/trend-reports/monthly-trend-report-template.md`: recurring monthly product opportunity report template.
+- `stores/beauty-accessories/top-30-sample-order-pack.md`: operating pack for ordering and inspecting the top 30 samples.
+- `control-room/index.html`: offline staff-facing backend control room.
+- `docs/launch-readiness-audit-2026-06-13.md`: current launch-readiness audit and missing work.
 - `backend-config/README.md`: structured backend control plane for markets, product gates, pricing, order routing, integrations, and verification.
 - `stores/README.md`: store-track index for home/kitchen utility, beauty accessories, and pet accessories.
 - `stores/beauty-accessories/top-100-product-scorecard.md`: ranked beauty product candidates and launch decisions.
