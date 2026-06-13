@@ -23,13 +23,14 @@ Business meaning:
 7. Sample order is approved.
 8. Sample is ordered.
 9. Sample is inspected.
-10. Pricing and margin are checked.
-11. Claims are approved or blocked.
-12. Product launch decision is made.
-13. Product is prepared for Shopify import.
-14. Product page content is drafted.
-15. Product page visual checks pass.
-16. Product is approved for test launch.
+10. US and UK market eligibility is reviewed.
+11. USD and GBP pricing and margin are checked.
+12. Claims are approved or blocked.
+13. Product launch decision is made.
+14. Product is prepared for Shopify import.
+15. Product page content is drafted.
+16. Product page visual checks pass.
+17. Product is approved for test launch.
 ```
 
 Definition:
@@ -47,6 +48,7 @@ Definition:
 | Sample review | Product is being inspected | Pass, fail, or retest |
 | Claims review | Wording and images are being checked | Approve safe wording |
 | Pricing review | Margin is being checked | Approve price or reject |
+| Market review | US and UK eligibility are being checked | Approve, block, prepare, or affiliate by market |
 | Ready for import | Product can enter Shopify setup | Draft product page |
 | Visual review | Product page/images are checked | Approve test launch |
 | Test launch | Product is live in limited form | Monitor orders and issues |
@@ -65,6 +67,7 @@ Definition:
 | Supplier cannot provide documents | Compliance risk | Keep as prepare only |
 | Sample quality is poor | Returns and reputation damage | Reject supplier or product |
 | Delivery is too slow | Customer dissatisfaction | Use faster supplier or exclude |
+| Product is not eligible in a launch market | Legal, tax, safety, or support risk | Block, prepare-only, or affiliate-only for that market |
 | Product margin is too low | Sales create losses | Reprice, bundle, or reject |
 | Claims are risky | Legal, platform, or ad account risk | Rewrite claims or block product |
 | Product photos are misleading | Returns and trust damage | Reshoot or reject listing |
@@ -84,7 +87,8 @@ Definition:
 | Supplier routes shortlisted | Supplier and Supplier Product |
 | Product file opened | Product File |
 | Sample ordered | Sample Test |
-| Pricing checked | Price Rule or Pricing Review |
+| Market eligibility checked | Market Eligibility |
+| Pricing checked | Market Price, Price Rule, or Pricing Review |
 | Claims reviewed | Product Claim |
 | Product imported | Product and Variant |
 | Product page checked | Visual Verification |
@@ -94,6 +98,8 @@ Definition:
 
 - A product cannot become `Ready for import` unless supplier review and compliance lane are complete.
 - A direct-sale product cannot become `Test launch` unless sample review passes.
+- A product cannot become `Test launch` in the United States or United Kingdom unless that market eligibility is approved.
+- A product cannot become `Ready for import` in both launch markets unless USD and GBP price reviews are complete.
 - A cosmetic cannot become `Test launch` unless ingredient, label, batch, and claim checks pass.
 - An electrical product cannot become `Test launch` unless safety proof and sample operation checks pass.
 - A high-compliance product cannot become direct-sale without authorized route and expert review.
@@ -110,6 +116,7 @@ Operational verification:
 - Product cannot skip sample review when sample is required.
 - Blocked products remain blocked.
 - Supplier failure creates a backup decision.
+- US and UK eligibility decisions are recorded separately.
 - Pricing review catches low-margin products.
 - Claims review happens before product-page drafting.
 
@@ -117,6 +124,8 @@ Backend verification:
 - Workflow statuses use one consistent list.
 - Every status change has a timestamp and reason.
 - Product candidate and product file are linked.
+- Market eligibility records link to product file IDs.
+- Market price records link to product file IDs.
 - Supplier and sample results are linked.
 - Visual review is stored separately from operational review.
 

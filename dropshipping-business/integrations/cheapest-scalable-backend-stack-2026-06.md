@@ -23,11 +23,13 @@ Definition:
 | Business Function | Starting Tool | Why This Is The Cheapest Serious Choice | Upgrade Trigger |
 |---|---|---|---|
 | Commerce backend | Shopify Basic | Products, checkout, orders, payments, tax settings, app ecosystem, and scale path | Upgrade to Grow when staff/team or fee economics justify it |
+| US and UK market setup | Shopify Markets | Lets the same store support US and UK market rules, currency, shipping, tax, and checkout presentation | Upgrade only if multi-store or localization complexity outgrows one Shopify setup |
 | Supplier import and fulfilment | DSers and CJdropshipping test routes | Free or low-cost entry and strong Shopify app presence | Add AppScenic/Syncee/Spocket when supplier quality or shipping region requires it |
 | Authorized no-inventory products | Shopify Collective where eligible | Brand-direct route without buying stock | Use direct brand partnerships when store has traction |
 | High-compliance product testing | TikTok Shop affiliate or Amazon Associates | Tests demand without direct compliance burden | Direct sale only after product file and authorization proof |
 | Payments | Shopify Payments if available | Reduces third-party complexity and supports Shopify features | Stripe/custom route only if platform or country requires it |
 | Tax | Shopify Tax settings first | Built into Shopify and adequate for early controlled launch | Avalara/TaxJar/accountant-led setup when multi-state/country complexity grows |
+| Duties and import taxes | Shopify duties/import settings where available, with HS code and country-of-origin fields | Reduces surprise costs and supports US/UK cross-border checkout planning | Add customs broker or specialist app if cross-border complexity grows |
 | Fraud | Shopify fraud analysis plus manual review rules | Built into commerce flow | Add stricter rules when chargeback risk rises |
 | Analytics | Shopify analytics, GA4, Google Tag Manager | Low-cost measurement foundation | Add data warehouse when reporting becomes multi-channel and manual |
 | Paid social tracking | TikTok Pixel and Meta Pixel | Required before social ads | Add server-side tracking later if ad scale justifies it |
@@ -80,10 +82,12 @@ Definition:
 ## User Inputs Needed Before Account Setup
 
 Before live setup, confirm:
-- First launch country.
+- First launch countries: United States and United Kingdom are now confirmed.
 - Business legal name and country.
 - Shopify account email.
 - Payment provider availability.
+- Tax and VAT registration approach.
+- Duties/import-tax approach for cross-border fulfilment.
 - Supplier app accounts.
 - Sample order budget.
 - Domain preference later.
@@ -98,6 +102,7 @@ Definition:
 
 Operational verification:
 - Every starting tool has a business function.
+- US and UK are represented as separate backend markets.
 - No paid upgrade is added without trigger.
 - Supplier tools are matched to product risk.
 - High-compliance products use affiliate or authorized route.
@@ -105,6 +110,9 @@ Operational verification:
 Backend verification:
 - Each system owns a clear responsibility.
 - Data flow is documented.
+- Market config files exist for US and UK.
+- Product records include US and UK eligibility fields.
+- Product records include HS code and country-of-origin requirements where needed.
 - No duplicate tools are chosen for the same job without reason.
 - No credentials are stored in files.
 

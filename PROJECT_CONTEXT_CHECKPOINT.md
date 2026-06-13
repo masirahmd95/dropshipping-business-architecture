@@ -71,6 +71,12 @@ Latest pushed checkpoint before executing validation docs:
 1cb6bfd Save project context checkpoint
 ```
 
+Latest pushed checkpoint before US and UK backend setup:
+
+```text
+519ca53 Add beauty launch readiness architecture
+```
+
 Current working state after the user's "execute next steps" instruction:
 
 - Beauty validation engine document created.
@@ -88,6 +94,27 @@ Current working state after the user's "execute next steps" instruction:
 - Playbook product-validation method created.
 - Playbook launch-readiness method created.
 
+Current working state after the user's "launch must be in us and uk" instruction:
+
+- United States and United Kingdom confirmed as first launch markets.
+- US and UK backend setup document created.
+- Backend config control plane created.
+- US market config created.
+- UK market config created.
+- Beauty store config created.
+- Product launch gates created.
+- Pricing and margin rules created for USD and GBP.
+- Order routing rules created for US and UK.
+- Integration setup plan created.
+- US/UK backend verification checklist created.
+- Core data model updated with market, market eligibility, market price, and tax/duties decision records.
+- Beauty launch readiness plan updated from US-first assumption to US+UK launch.
+- Product compliance testing updated with US/UK eligibility rule.
+- Product file index updated so first 15 products have pending US and UK eligibility.
+- Product validation workflow updated with market review before import.
+- Order-to-fulfilment workflow updated with market eligibility and customs checks before supplier routing.
+- Playbook US/UK backend setup method created.
+
 ## Repository Structure
 
 Current main structure:
@@ -101,6 +128,7 @@ dropshipping-business/
   README.md
   docs/
   backend-architecture/
+  backend-config/
   integrations/
   operations/
   data-models/

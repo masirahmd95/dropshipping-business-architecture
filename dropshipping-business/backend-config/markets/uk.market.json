@@ -1,0 +1,58 @@
+{
+  "market_id": "GB",
+  "market_name": "United Kingdom",
+  "status": "planned_launch",
+  "currency": "GBP",
+  "language": "en",
+  "commerce_platform_market": "shopify_united_kingdom_market",
+  "plain_english_summary": "The UK launch needs VAT review, low-value goods controls, product safety evidence, consumer cancellation wording, and cosmetic responsible-person checks before direct-sale cosmetics.",
+  "tax": {
+    "tax_type": "VAT",
+    "collection_status": "pending_registration_review",
+    "rule_summary": "UK VAT treatment depends on business location, registration status, where goods are located at sale, and consignment value.",
+    "required_backend_fields": [
+      "ship_to_country",
+      "ship_to_region",
+      "vat_registration_status",
+      "consignment_value_gbp",
+      "goods_location_at_point_of_sale",
+      "tax_collection_enabled",
+      "tax_amount_collected",
+      "tax_report_export_status"
+    ],
+    "operational_gate": "Do not publish UK checkout until VAT registration and collection rules are confirmed."
+  },
+  "duties_and_imports": {
+    "low_value_goods_threshold_gbp": 135,
+    "preferred_customer_experience": "DDP_where_available",
+    "required_product_fields": ["hs_code", "country_of_origin", "declared_value", "product_category"],
+    "rule_summary": "For UK cross-border orders, backend records must know consignment value, product type, HS code, and country of origin before duties and import-tax handling is approved."
+  },
+  "shipping": {
+    "shipping_zone_status": "planned",
+    "customer_promise_rule": "Show delivery arrangements, costs, and expected delivery timing before checkout.",
+    "hold_rule": "If supplier processing plus shipping time is unknown, the product cannot be published for UK checkout."
+  },
+  "consumer_rules": {
+    "pre_order_information": "Product description, total price including taxes where required, payment methods, delivery arrangements, cancellation rights, and seller contact details must be clear before order.",
+    "cancellation_rule": "UK online customers generally must be told they can cancel up to 14 days after delivery unless an exception applies.",
+    "delivery_rule": "Use a 30-day delivery control unless a different delivery time is agreed with the customer."
+  },
+  "product_safety": {
+    "general_rule": "If the business makes, imports, distributes, or sells consumer products in the UK, it must make sure products are safe and correctly labelled.",
+    "documentation_required": ["technical_documentation_where_relevant", "labelling_check", "safe_use_instructions", "sample_check"],
+    "cosmetics_gb": "Direct-sale cosmetics for Great Britain require notification, responsible-person details, product information file location, ingredient summary, label image, and packaging photo.",
+    "cosmetics_ni": "Northern Ireland can have a separate cosmetics route. Treat cosmetics for NI as blocked until reviewed."
+  },
+  "market_eligibility_values": ["pending", "approved", "blocked", "prepare_only", "affiliate_only"],
+  "source_links": [
+    "https://www.gov.uk/register-for-vat",
+    "https://www.gov.uk/guidance/vat-and-overseas-goods-sold-directly-to-customers-in-the-uk",
+    "https://www.gov.uk/online-and-distance-selling-for-businesses",
+    "https://www.gov.uk/guidance/product-safety-advice-for-businesses",
+    "https://www.gov.uk/guidance/submit-a-cosmetic-product-notification",
+    "https://help.shopify.com/en/manual/taxes",
+    "https://help.shopify.com/en/manual/international/duties-and-import-taxes"
+  ],
+  "last_source_check": "2026-06-13"
+}

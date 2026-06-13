@@ -1,0 +1,52 @@
+{
+  "ruleset_id": "beauty_accessories_pricing_margin_us_gb",
+  "store_id": "beauty_accessories",
+  "purpose": "Create price rules that protect margin across US and UK launch markets before products are imported.",
+  "definitions": {
+    "landed_cost": "The real estimated cost to get a product to the customer, including product cost, supplier shipping, duties, import taxes where relevant, payment fees, return buffer, and packaging or handling assumptions.",
+    "gross_margin": "The percentage of the selling price left after product and fulfilment cost before overhead and advertising.",
+    "price_floor": "The lowest visible competitor price customers can easily compare against."
+  },
+  "base_currency": "USD",
+  "market_currencies": {
+    "US": "USD",
+    "GB": "GBP"
+  },
+  "required_inputs_per_product": [
+    "supplier_product_cost",
+    "supplier_shipping_cost_us",
+    "supplier_shipping_cost_gb",
+    "supplier_processing_days",
+    "estimated_delivery_days_us",
+    "estimated_delivery_days_gb",
+    "payment_fee_buffer",
+    "return_defect_buffer",
+    "duties_import_tax_buffer_us",
+    "duties_import_tax_buffer_gb",
+    "price_floor_us",
+    "price_floor_gb",
+    "target_price_usd",
+    "target_price_gbp"
+  ],
+  "starting_margin_policy": {
+    "target_gross_margin_percent": 60,
+    "minimum_review_margin_percent": 50,
+    "reject_below_margin_percent": 40,
+    "rule_summary": "A product below 40 percent estimated gross margin should be rejected or repositioned unless there is a clear strategic reason."
+  },
+  "currency_policy": {
+    "rule_summary": "GBP prices should be approved as market prices, not blind currency conversions.",
+    "why": "UK VAT, duties, shipping costs, competitor prices, and customer expectations can differ from the US."
+  },
+  "price_rounding": {
+    "US": "Use customer-friendly endings such as .99 only after margin check.",
+    "GB": "Use customer-friendly endings such as .99 only after margin check."
+  },
+  "discount_policy": {
+    "maximum_launch_discount_percent_without_review": 15,
+    "bundle_discount_requires_margin_check": true,
+    "free_shipping_requires_margin_check": true
+  },
+  "approval_statuses": ["pending", "approved", "reprice", "reject"],
+  "last_updated": "2026-06-13"
+}

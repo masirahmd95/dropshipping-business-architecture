@@ -1,0 +1,117 @@
+{
+  "store_id": "beauty_accessories",
+  "store_name_working": "Beauty Accessories",
+  "status": "backend_setup_us_uk",
+  "business_model": "zero_inventory_dropshipping",
+  "launch_markets": ["US", "GB"],
+  "default_language": "en",
+  "primary_platform": "shopify",
+  "branding_status": "deferred",
+  "plain_english_summary": "This store sells beauty tools, storage, hair accessories, routine accessories, selected cosmetics, and selected electrical beauty tools only after product-file checks. The first direct-sale launch should focus on lower-risk accessories.",
+  "product_lanes": [
+    {
+      "lane_id": "lane_1",
+      "name": "simple_accessories",
+      "launch_position": "direct_sale_after_sample_pass",
+      "examples": ["hair clips", "cosmetic organizers", "toiletry bags", "headbands", "scrunchies"]
+    },
+    {
+      "lane_id": "lane_2",
+      "name": "skin_contact_tools",
+      "launch_position": "direct_sale_after_sample_and_material_check",
+      "examples": ["scalp shampoo brush", "triangle powder puff", "reusable makeup remover pads"]
+    },
+    {
+      "lane_id": "lane_3",
+      "name": "cosmetics",
+      "launch_position": "prepare_only_until_authorized_documents_pass",
+      "examples": ["lip oil", "blush", "mascara", "setting spray", "hair oil"]
+    },
+    {
+      "lane_id": "lane_4",
+      "name": "electrical_beauty_tools",
+      "launch_position": "prepare_only_until_safety_documents_pass",
+      "examples": ["heated eyelash curler", "mini straightener", "beauty fridge", "hair dryer"]
+    },
+    {
+      "lane_id": "lane_5",
+      "name": "high_compliance_products",
+      "launch_position": "affiliate_or_blocked_until_expert_review",
+      "examples": ["SPF", "acne products", "hair growth products", "teeth whitening", "LED therapy masks"]
+    }
+  ],
+  "required_product_metafields": [
+    "product_file_id",
+    "store_id",
+    "compliance_lane",
+    "sample_status",
+    "sample_result",
+    "supplier_route_primary",
+    "supplier_route_backup",
+    "supplier_processing_days",
+    "supplier_shipping_regions",
+    "country_of_origin",
+    "hs_code",
+    "market_eligibility_us",
+    "market_eligibility_gb",
+    "approved_claims_status",
+    "blocked_claims_status",
+    "material_or_ingredient_status",
+    "label_photo_status",
+    "safety_document_status",
+    "target_price_usd",
+    "target_price_gbp",
+    "estimated_landed_cost_usd",
+    "estimated_landed_cost_gbp",
+    "margin_status",
+    "visual_verification_status",
+    "publish_approval_status"
+  ],
+  "controlled_statuses": {
+    "sample_status": ["not_ordered", "ordered", "received", "passed", "failed", "retest"],
+    "market_eligibility": ["pending", "approved", "blocked", "prepare_only", "affiliate_only"],
+    "publish_approval_status": ["blocked", "draft", "ready_for_visual_check", "approved_for_test_launch", "live", "paused"]
+  },
+  "admin_views_to_create": [
+    "product_approval_queue",
+    "sample_testing_queue",
+    "supplier_route_review",
+    "market_eligibility_us",
+    "market_eligibility_gb",
+    "pricing_review",
+    "claims_review",
+    "visual_verification_queue",
+    "order_exception_queue"
+  ],
+  "launch_collections": [
+    "travel_beauty_storage",
+    "hair_accessories",
+    "routine_tools",
+    "makeup_organization",
+    "sample_passed_products"
+  ],
+  "blocked_at_launch": [
+    "supplements",
+    "ingestibles",
+    "unverified cosmetics",
+    "unverified electrical beauty devices",
+    "products claiming to treat acne",
+    "products claiming to grow hair",
+    "products claiming to cure or treat medical conditions",
+    "counterfeit or brand-copy products"
+  ],
+  "visual_surfaces_to_verify": [
+    "desktop_product_page",
+    "mobile_product_page",
+    "cart",
+    "checkout_us",
+    "checkout_gb",
+    "order_confirmation",
+    "shipping_notification_email",
+    "refund_notification_email",
+    "customer_account_order_status",
+    "shopify_admin_product_view",
+    "shopify_admin_order_view"
+  ],
+  "last_updated": "2026-06-13"
+}

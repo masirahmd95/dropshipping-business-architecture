@@ -1,0 +1,79 @@
+{
+  "ruleset_id": "beauty_accessories_order_routing_us_gb",
+  "store_id": "beauty_accessories",
+  "purpose": "Define when a paid customer order is allowed to move to supplier fulfilment.",
+  "definitions": {
+    "order_routing": "The rule that decides which supplier receives an order.",
+    "manual_review": "A staff check before the system continues.",
+    "silent_failure": "A failure that happens without creating an alert or task."
+  },
+  "normal_flow": [
+    "payment_successful",
+    "fraud_check_passed_or_reviewed",
+    "market_eligibility_confirmed",
+    "supplier_route_available",
+    "stock_or_availability_confirmed",
+    "shipping_promise_confirmed",
+    "supplier_order_created",
+    "tracking_received",
+    "customer_notified",
+    "finance_and_analytics_updated"
+  ],
+  "pre_supplier_routing_checks": [
+    {
+      "check_id": "payment_status",
+      "pass_condition": "payment_status is paid or authorized according to platform rules",
+      "failure_action": "Do not send to supplier. Keep order unpaid or payment-failed."
+    },
+    {
+      "check_id": "fraud_status",
+      "pass_condition": "fraud risk is low or manually approved",
+      "failure_action": "Hold order for manual review."
+    },
+    {
+      "check_id": "market_eligibility",
+      "pass_condition": "All order lines are approved for destination market",
+      "failure_action": "Hold order and create support or operations task."
+    },
+    {
+      "check_id": "supplier_destination_support",
+      "pass_condition": "Supplier route supports the order destination country",
+      "failure_action": "Try backup supplier route or hold order."
+    },
+    {
+      "check_id": "shipping_time",
+      "pass_condition": "Supplier delivery estimate fits customer promise",
+      "failure_action": "Hold order and contact customer if promise cannot be met."
+    },
+    {
+      "check_id": "customs_fields",
+      "pass_condition": "HS code, country of origin, and declared value are present where needed",
+      "failure_action": "Hold order until customs fields are corrected."
+    }
+  ],
+  "market_rules": {
+    "US": {
+      "currency": "USD",
+      "required_order_fields": ["ship_to_state", "sales_tax_status", "duty_import_tax_status", "tracking_number"],
+      "customer_surprise_fee_policy": "Prefer DDP or clear checkout wording where cross-border charges could apply."
+    },
+    "GB": {
+      "currency": "GBP",
+      "required_order_fields": ["ship_to_country", "vat_status", "consignment_value_gbp", "duty_import_tax_status", "tracking_number"],
+      "customer_surprise_fee_policy": "Prefer DDP or clear checkout wording where cross-border charges could apply."
+    }
+  },
+  "exception_queue_reasons": [
+    "payment_failed",
+    "high_fraud_risk",
+    "supplier_stockout",
+    "supplier_rejected_order",
+    "missing_tracking",
+    "delivery_delay",
+    "customs_field_missing",
+    "market_eligibility_blocked",
+    "customer_address_issue"
+  ],
+  "backend_rule": "Every failed routing event must create a visible exception record. No supplier failure should be hidden in app history only.",
+  "last_updated": "2026-06-13"
+}

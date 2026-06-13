@@ -38,9 +38,10 @@ Do not commit:
 | 5 | Analytics | Create GA4 property and Google Tag Manager container | Event tracking plan |
 | 6 | Social pixels | Create TikTok Pixel and Meta Pixel if ads will be used | Pixel placement checklist |
 | 7 | Email/support | Enable Shopify Email and Shopify Inbox | Lifecycle message map |
-| 8 | Tax | Configure Shopify Tax settings for launch country | Tax setup questions and accountant handoff notes |
-| 9 | Affiliate routes | Apply for TikTok Shop affiliate, Amazon Associates, or brand affiliate routes | Affiliate-first product map |
-| 10 | Accounting | Defer QuickBooks/Xero until sales begin or accountant requests it | Export/reconciliation plan |
+| 8 | Shopify Markets | Configure United States and United Kingdom as launch markets | Market configuration map |
+| 9 | Tax and duties | Configure Shopify Tax settings and duties/import-tax approach for US and UK | Tax setup questions and accountant handoff notes |
+| 10 | Affiliate routes | Apply for TikTok Shop affiliate, Amazon Associates, or brand affiliate routes | Affiliate-first product map |
+| 11 | Accounting | Defer QuickBooks/Xero until sales begin or accountant requests it | Export/reconciliation plan |
 
 Definitions:
 - Property: a Google Analytics workspace for one website or app.
@@ -49,11 +50,14 @@ Definitions:
 ## First Launch Configuration Decisions
 
 Confirm before setup:
-- Launch country.
-- Store currency.
+- Launch countries: United States and United Kingdom.
+- Store currencies: USD and GBP.
 - Business legal country.
 - Shopify account email.
 - Payment provider eligibility.
+- US sales tax approach.
+- UK VAT approach.
+- Duties and import-tax approach.
 - Supplier app choice.
 - Sample-order budget.
 - Return address or return policy approach.

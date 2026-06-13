@@ -1,0 +1,56 @@
+{
+  "market_id": "US",
+  "market_name": "United States",
+  "status": "planned_launch",
+  "currency": "USD",
+  "language": "en",
+  "commerce_platform_market": "shopify_united_states_market",
+  "plain_english_summary": "The US launch needs state-by-state sales tax monitoring, customs fields for imported goods, clear shipping promises, product safety evidence, and cosmetic controls where products are cosmetics.",
+  "tax": {
+    "tax_type": "state_sales_tax",
+    "collection_status": "pending_registration_review",
+    "rule_summary": "Sales tax is handled by states, not one national US rule. The backend must track where the business has nexus and where registration is confirmed.",
+    "required_backend_fields": [
+      "ship_to_state",
+      "tax_registration_status",
+      "nexus_status",
+      "tax_collection_enabled",
+      "tax_rate_source",
+      "tax_amount_collected",
+      "tax_report_export_status"
+    ],
+    "operational_gate": "Do not treat US sales tax as active everywhere until registration and collection rules are confirmed."
+  },
+  "duties_and_imports": {
+    "preferred_customer_experience": "DDP_where_available",
+    "ddp_definition": "Delivered Duty Paid means the seller collects or covers duties and import taxes so the customer is not surprised at delivery.",
+    "dap_definition": "Delivered At Place means the customer may have to pay import charges to the carrier at delivery.",
+    "required_product_fields": ["hs_code", "country_of_origin", "declared_value", "product_category"],
+    "rule_summary": "Imported products need HS code and country-of-origin records before cross-border checkout is approved."
+  },
+  "shipping": {
+    "shipping_zone_status": "planned",
+    "customer_promise_rule": "Only advertise delivery times that supplier testing supports.",
+    "maximum_unverified_shipping_days": 0,
+    "hold_rule": "If supplier processing plus shipping time is unknown, the product cannot be published for US checkout."
+  },
+  "consumer_rules": {
+    "shipping_promise_rule": "US internet orders need a reasonable basis for the advertised shipping timeframe. If no timeframe is stated, use a 30-day control rule until reviewed.",
+    "refund_or_delay_rule": "If promised shipping cannot be met, support must decide whether to get customer consent for delay or refund."
+  },
+  "product_safety": {
+    "general_rule": "Products must be safe and supplier evidence must be stored before publication.",
+    "electrical_products": "Hold until safety documents, plug/voltage/battery details, instructions, warnings, and sample checks pass.",
+    "cosmetics": "Direct-sale cosmetics require US cosmetic compliance review, responsible-person details where relevant, ingredient records, safety substantiation, label images, and adverse-event process."
+  },
+  "market_eligibility_values": ["pending", "approved", "blocked", "prepare_only", "affiliate_only"],
+  "source_links": [
+    "https://www.streamlinedsalestax.org/for-businesses/remote-seller-faqs/remote-seller-state-guidance",
+    "https://www.ftc.gov/legal-library/browse/rules/mail-internet-or-telephone-order-merchandise-rule",
+    "https://www.cpsc.gov/Business--Manufacturing",
+    "https://www.fda.gov/cosmetics/cosmetics-laws-regulations/modernization-cosmetics-regulation-act-2022-mocra",
+    "https://help.shopify.com/en/manual/taxes",
+    "https://help.shopify.com/en/manual/international/duties-and-import-taxes"
+  ],
+  "last_source_check": "2026-06-13"
+}

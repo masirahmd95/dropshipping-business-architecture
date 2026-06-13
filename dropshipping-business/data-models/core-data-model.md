@@ -13,6 +13,8 @@ Definition:
 |---|---|---|
 | Store | One separate store track or live store | store ID, store type, status, country, currency, configuration version, launch stage |
 | Store Configuration | Store-specific settings that adjust the shared backend | store, product lanes, required attributes, blocked products, compliance rules, supplier rules, visual rules |
+| Market | Country or region where the store can sell | market ID, country or region, currency, tax model, duties rule, shipping rule, returns rule, review date |
+| Market Eligibility | Product approval by country | product, market, eligibility status, reason, required evidence, approval date |
 | Market Signal | Evidence that a product or niche may have demand | platform, query/product, category, signal type, metric, source URL, captured date |
 | Product Candidate | Product idea being researched before store import | candidate name, niche cluster, customer problem, platform signals, Temu price floor, supplier count, estimated landed cost, target price, visual demo score, decision status |
 | Product | Item sold in the store | title, description, category, status, supplier, images, SEO fields, publication status |
@@ -26,12 +28,14 @@ Definition:
 | Supplier Product | Supplier-side product record | supplier SKU, supplier cost, supplier stock, processing time, source URL, authorization status |
 | Inventory Snapshot | Stock state at a point in time | variant, supplier, available quantity, reserved quantity, sync time |
 | Price Rule | Pricing logic | cost basis, markup, minimum margin, rounding rule, sale rule |
+| Market Price | Approved product price by market | product, market, currency, target price, landed cost, margin, approval status |
 | Customer | Person who buys | name, email, phone, address, consent, lifetime value |
 | Cart | Items before checkout | customer/session, items, discounts, abandoned status |
-| Order | Customer purchase | customer, line items, payment status, fulfilment status, total, tax, shipping |
+| Order | Customer purchase | customer, line items, market, payment status, fulfilment status, total, tax, shipping |
 | Order Line | One product inside an order | product, variant, quantity, price, cost, supplier, margin |
 | Payment | Money attempt or result | order, provider, amount, status, transaction ID, failure reason |
 | Fraud Review | Risk decision | order, risk score, reason, decision, reviewer |
+| Tax And Duties Decision | Tax, VAT, duty, or import-tax treatment | order or product, market, rule source, registration status, amount, review status |
 | Supplier Order | Order sent to supplier | supplier, order lines, supplier order ID, status, cost |
 | Shipment | Delivery movement | supplier order, carrier, tracking number, status, estimated delivery |
 | Return Request | Customer return | order, item, reason, eligibility, status |
@@ -52,6 +56,10 @@ Definitions:
 - Market signal: evidence from a marketplace, search platform, social platform, or supplier source that helps judge demand.
 - Product candidate: a product idea that has not yet been approved for the store catalogue.
 - Price floor: the lowest visible market price customers can easily find for a similar product.
+- Market: a country or region where the store can sell, such as the United States or United Kingdom.
+- Market eligibility: whether one product is approved, blocked, affiliate-only, or prepare-only for one market.
+- Market price: the approved price for one product in one market and currency.
+- Tax and duties decision: the stored decision about sales tax, VAT, duties, or import tax treatment.
 - Visual demo score: a judgement of how clearly the product benefit can be shown in photos or short video.
 - Store configuration: settings that adjust the shared backend for one store.
 - Launch stage: the current maturity of a store, such as research, setup, test, live, paused, or closed.
@@ -61,6 +69,7 @@ Definitions:
 ```text
 Store
 -> Store Configuration
+-> Market
 -> Market Signal
 -> Product Candidate
 ```
@@ -73,6 +82,8 @@ Market Signal
 -> Product Claim
 -> Product Compliance Review
 -> Visual Verification
+-> Market Eligibility
+-> Market Price
 -> Product / Variant
 ```
 
@@ -87,6 +98,7 @@ Supplier
 -> Order
 -> Order Line
 -> Payment
+-> Tax And Duties Decision
 -> Supplier Order
 -> Shipment
 -> Support Ticket / Return Request / Refund
@@ -109,7 +121,11 @@ Definition:
 ## Data Quality Rules
 
 - Every major record should include `store_id` once more than one store exists.
+- Every market-sensitive record should include `market_id` when it affects country, currency, tax, duties, shipping, returns, or compliance.
 - A product cannot go live without supplier, cost, price, margin, shipping region, return status, store ID, and product category.
+- A product cannot go live in the United States or United Kingdom without a market eligibility decision for that market.
+- A product cannot go live in more than one currency without market price approval for each currency.
+- Cross-border products must store HS code and country of origin before checkout approval where those fields are needed.
 - A product cannot be imported into the catalogue without a product candidate record unless manually approved as an exception.
 - A product candidate should have at least three demand signals before sample ordering unless the user marks it as an experimental test.
 - A product candidate must include price floor, estimated landed cost, target price, compliance risk, return risk, and visual demo score.
@@ -120,7 +136,7 @@ Definition:
 - A product with blocked IP risk cannot be published, advertised, or routed to checkout.
 - A licensed product cannot go live without authorization evidence, allowed territory, and allowed channel records.
 - A variant cannot go live without SKU, supplier SKU, price, cost, and inventory rule.
-- An order cannot route to a supplier until payment and fraud rules allow it.
+- An order cannot route to a supplier until payment, fraud, market eligibility, customs fields, and supplier destination rules allow it.
 - A refund must connect to the original order and payment.
 - A shipment must connect to a supplier order and customer order.
 - Analytics must connect product, order, campaign, and revenue where possible.

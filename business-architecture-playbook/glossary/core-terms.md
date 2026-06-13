@@ -18,7 +18,9 @@ This glossary defines the technical and business-system terms used in the projec
 - CAC: customer acquisition cost; the cost of getting one paying customer.
 - Cart: the temporary list of products a customer intends to buy.
 - Checkout: the process where a customer confirms shipping, payment, tax, and order details.
+- Control plane: the rule layer that tells business systems what is allowed, blocked, required, or waiting for proof.
 - Counterfeit goods: fake products that imitate protected goods or brands without permission.
+- Country of origin: the country where a product was made, used for customs and duty decisions.
 - Data model: the plan for what information the system stores and how records connect.
 - Demand signal: evidence that customers may want a product, such as search growth, bestseller rank, reviews, visible orders, or viral videos.
 - Differentiation: the reason a customer would choose one store or product instead of another.
@@ -35,9 +37,12 @@ This glossary defines the technical and business-system terms used in the projec
 - Inventory: the products available to sell.
 - IP: intellectual property; legally protected creations or business identifiers such as trademarks, copyrights, patents, designs, and trade secrets.
 - Landed cost: the full cost to get a product to the customer or fulfilment point, including product cost, shipping, duties, packaging, and handling where relevant.
+- Launch market: a country or region where customers are allowed to buy from the store.
 - Licensed goods: products sold with permission from the rights holder.
 - Margin: the difference between selling price and cost after considering relevant fees.
 - Market intelligence: structured research about demand, competitors, pricing, suppliers, and customer behavior.
+- Market eligibility: whether a product is approved, blocked, affiliate-only, or prepare-only for one country or region.
+- Market price: the approved price for one product in one market and currency.
 - Metadata: hidden or structured information about a page or product, often used by search engines, ads, and catalogues.
 - Module: a self-contained part of a system with one main responsibility.
 - Multi-store architecture: one operating model used to run more than one store.
@@ -55,6 +60,7 @@ This glossary defines the technical and business-system terms used in the projec
 - Product handle: the readable part of a product page URL, usually based on the product name.
 - Product saturation: when many sellers offer near-identical products, often forcing prices and margins down.
 - Provider: a company or tool that supplies a function, such as payments, tax, support, or email.
+- HS code: an international product classification code used for customs.
 - Record: stored information about one thing, such as a product, order, customer, or payment.
 - Relative interest: a comparison score rather than exact volume, such as Google Trends' 0 to 100 scale.
 - Review velocity: how quickly a product gains new reviews over time.

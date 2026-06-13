@@ -36,6 +36,8 @@ The current validation documents are:
 
 - `dropshipping-business/docs/beauty-product-validation-2026-06.md`
 - `dropshipping-business/docs/beauty-launch-readiness-plan.md`
+- `dropshipping-business/docs/us-uk-launch-backend-setup.md`
+- `dropshipping-business/backend-config/README.md`
 - `dropshipping-business/stores/beauty-accessories/top-100-product-scorecard.md`
 - `dropshipping-business/stores/beauty-accessories/sample-order-plan.md`
 - `dropshipping-business/stores/beauty-accessories/product-files/product-file-index.md`
@@ -63,6 +65,15 @@ That includes:
 - Analytics and attribution
 - Accounting exports
 - Operational, backend, and visual verification
+
+Current launch markets:
+
+- United States
+- United Kingdom
+
+Definition:
+- Launch market: a country or region where customers are allowed to buy from the store.
+- Control plane: the backend rule layer that defines what is allowed, blocked, required, or waiting for proof.
 
 Definition:
 - Verification: checking that the system works, stays tidy behind the scenes, and appears visually correct to customers and staff.

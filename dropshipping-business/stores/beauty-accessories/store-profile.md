@@ -17,7 +17,7 @@ Beauty tools and skincare-adjacent accessories
 Status:
 
 ```text
-Validation
+Backend setup for US and UK launch
 ```
 
 Definition:
@@ -52,6 +52,12 @@ Definition:
 
 Required product attributes:
 
+- Market eligibility for United States.
+- Market eligibility for United Kingdom.
+- USD target price.
+- GBP target price.
+- HS code where needed for customs.
+- Country of origin where needed for customs.
 - Material.
 - Skin-contact relevance.
 - Hygiene notes.
@@ -78,6 +84,8 @@ Definition:
 
 - `../../docs/beauty-product-validation-2026-06.md`: validation engine and launch rules.
 - `../../docs/beauty-launch-readiness-plan.md`: launch gates and first launch assumptions.
+- `../../docs/us-uk-launch-backend-setup.md`: US and UK backend setup.
+- `../../backend-config/README.md`: structured backend control plane.
 - `top-100-product-scorecard.md`: ranked product candidates and launch decisions.
 - `sample-order-plan.md`: first controlled sample batch.
 - `product-files/product-file-index.md`: first product proof files.
@@ -112,13 +120,17 @@ Operational:
 - Product candidate has demand signals from marketplace and social channels.
 - Product does not require regulatory review before launch.
 - Supplier sample is checked for material, comfort, and hygiene.
+- Product has a US and UK eligibility decision before either checkout market is enabled.
 
 Backend tidiness:
 - Every product has `store_id = beauty_accessories`.
+- Every market-sensitive product has `market_eligibility_us` and `market_eligibility_gb`.
+- USD and GBP prices are reviewed separately before publication.
 - Claim restrictions are recorded before copywriting.
 - Product page cannot publish without compliance decision.
 
 Visual:
+- US and UK versions show the correct currency, shipping promise, and product restrictions.
 - Product page avoids exaggerated results.
 - Product images show actual contents and size.
 - Instructions do not imply medical or treatment benefits.

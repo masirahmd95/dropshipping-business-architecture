@@ -1,0 +1,94 @@
+{
+  "integration_plan_id": "beauty_accessories_us_gb_launch_plan",
+  "store_id": "beauty_accessories",
+  "status": "planned_not_connected",
+  "plain_english_summary": "This is the cheapest serious backend stack for a US and UK beauty dropshipping launch. Accounts and credentials still need to be created by the user outside Git.",
+  "integrations": [
+    {
+      "business_function": "commerce_backend",
+      "starting_tool": "Shopify Basic",
+      "setup_status": "account_needed",
+      "why": "Handles product catalogue, checkout, customers, orders, payments, tax settings, markets, and app ecosystem."
+    },
+    {
+      "business_function": "markets_and_currency",
+      "starting_tool": "Shopify Markets",
+      "setup_status": "account_needed",
+      "why": "Creates separate US and UK market behaviour, including USD and GBP presentation."
+    },
+    {
+      "business_function": "supplier_import_and_fulfilment",
+      "starting_tool": "DSers plus CJdropshipping plus EPROLO tests",
+      "setup_status": "account_needed",
+      "why": "Low-cost routes for product testing and sample ordering before direct launch."
+    },
+    {
+      "business_function": "payments",
+      "starting_tool": "Shopify Payments where eligible",
+      "setup_status": "business_details_needed",
+      "why": "Lowest complexity payment route inside Shopify."
+    },
+    {
+      "business_function": "tax",
+      "starting_tool": "Shopify Tax settings first",
+      "setup_status": "registration_review_needed",
+      "why": "Built-in tax calculation support for US, EU, and UK regions, with accountant review before live collection."
+    },
+    {
+      "business_function": "duties_and_import_taxes",
+      "starting_tool": "Shopify duties and import taxes settings where plan and carrier support allow",
+      "setup_status": "product_customs_fields_needed",
+      "why": "Reduces surprise costs for US and UK customers when cross-border shipping is used."
+    },
+    {
+      "business_function": "fraud",
+      "starting_tool": "Shopify fraud analysis and manual review queue",
+      "setup_status": "account_needed",
+      "why": "Keeps risky orders from being sent to suppliers automatically."
+    },
+    {
+      "business_function": "analytics",
+      "starting_tool": "Shopify analytics, GA4, and Google Tag Manager",
+      "setup_status": "account_needed",
+      "why": "Tracks traffic, product events, checkout behaviour, and revenue."
+    },
+    {
+      "business_function": "paid_social_tracking",
+      "starting_tool": "Meta Pixel and TikTok Pixel",
+      "setup_status": "account_needed",
+      "why": "Needed before paid social testing."
+    },
+    {
+      "business_function": "email",
+      "starting_tool": "Shopify Email",
+      "setup_status": "account_needed",
+      "why": "Low-cost starting point for order-adjacent and lifecycle emails."
+    },
+    {
+      "business_function": "support",
+      "starting_tool": "Shopify Inbox",
+      "setup_status": "account_needed",
+      "why": "Low-cost support inbox before volume justifies Gorgias or Zendesk."
+    },
+    {
+      "business_function": "reviews",
+      "starting_tool": "Judge.me later",
+      "setup_status": "deferred",
+      "why": "Reviews should start after fulfilment quality is proven."
+    },
+    {
+      "business_function": "accounting",
+      "starting_tool": "Shopify exports first, QuickBooks or Xero later",
+      "setup_status": "deferred",
+      "why": "Avoid paid accounting sync before there are real transactions."
+    },
+    {
+      "business_function": "automation",
+      "starting_tool": "Manual SOPs first, Make or Zapier later",
+      "setup_status": "deferred",
+      "why": "Automate only after repeated manual tasks are proven."
+    }
+  ],
+  "secrets_policy": "No API keys, passwords, tokens, payment secrets, or supplier credentials may be committed to this repository.",
+  "last_updated": "2026-06-13"
+}

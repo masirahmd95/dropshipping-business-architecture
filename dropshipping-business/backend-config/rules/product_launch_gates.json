@@ -1,0 +1,84 @@
+{
+  "ruleset_id": "beauty_accessories_product_launch_gates_us_gb",
+  "store_id": "beauty_accessories",
+  "purpose": "Stop products from being sold before the business has proof, supplier confidence, pricing, market eligibility, and visual accuracy.",
+  "definitions": {
+    "gate": "A required checkpoint before a product moves forward.",
+    "override": "A manual exception approved by the owner and recorded with a reason.",
+    "market_eligibility": "Whether a product can be sold in a specific country."
+  },
+  "gates": [
+    {
+      "gate_id": "candidate_record",
+      "required_before": "sample_order",
+      "pass_condition": "Product candidate exists with store_id, category, demand signals, expected customer problem, and first decision."
+    },
+    {
+      "gate_id": "product_file_opened",
+      "required_before": "sample_order",
+      "pass_condition": "Product file ID exists and missing evidence is listed."
+    },
+    {
+      "gate_id": "supplier_route",
+      "required_before": "sample_order",
+      "pass_condition": "Primary supplier route and backup route are recorded."
+    },
+    {
+      "gate_id": "sample_passed",
+      "required_before": "product_import",
+      "pass_condition": "Sample was received, inspected, photographed, and marked passed or retest-approved."
+    },
+    {
+      "gate_id": "market_eligibility_us",
+      "required_before": "us_publication",
+      "pass_condition": "Product is approved, affiliate-only, prepare-only, or blocked for US with reason."
+    },
+    {
+      "gate_id": "market_eligibility_gb",
+      "required_before": "gb_publication",
+      "pass_condition": "Product is approved, affiliate-only, prepare-only, or blocked for UK with reason."
+    },
+    {
+      "gate_id": "customs_fields",
+      "required_before": "cross_border_checkout",
+      "pass_condition": "HS code, country of origin, product category, and declared value are recorded where needed."
+    },
+    {
+      "gate_id": "pricing_review",
+      "required_before": "product_import",
+      "pass_condition": "USD and GBP target prices, landed cost estimate, margin status, and price floor are reviewed."
+    },
+    {
+      "gate_id": "claims_review",
+      "required_before": "product_page_copy",
+      "pass_condition": "Approved claims and blocked claims are stored separately."
+    },
+    {
+      "gate_id": "visual_verification",
+      "required_before": "test_launch",
+      "pass_condition": "Desktop and mobile product page, cart, checkout, and email surfaces are checked."
+    }
+  ],
+  "lane_overrides": {
+    "lane_1": {
+      "direct_sale_allowed_after": ["sample_passed", "pricing_review", "claims_review", "market_eligibility_us", "market_eligibility_gb", "visual_verification"]
+    },
+    "lane_2": {
+      "direct_sale_allowed_after": ["sample_passed", "material_check", "cleaning_instructions", "pricing_review", "claims_review", "market_eligibility_us", "market_eligibility_gb", "visual_verification"]
+    },
+    "lane_3": {
+      "direct_sale_allowed_after": ["authorized_supplier", "ingredient_records", "label_photos", "batch_process", "cosmetic_market_review", "claims_review", "visual_verification"],
+      "default_status": "prepare_only"
+    },
+    "lane_4": {
+      "direct_sale_allowed_after": ["safety_certification_evidence", "plug_voltage_battery_review", "sample_passed", "warnings_and_manual", "market_eligibility_us", "market_eligibility_gb", "visual_verification"],
+      "default_status": "prepare_only"
+    },
+    "lane_5": {
+      "direct_sale_allowed_after": ["expert_review", "authorized_route", "regulatory_documents", "payment_provider_review", "claims_review"],
+      "default_status": "affiliate_or_blocked"
+    }
+  },
+  "override_rule": "Overrides must include owner approval, date, reason, market, product_file_id, and risk note.",
+  "last_updated": "2026-06-13"
+}

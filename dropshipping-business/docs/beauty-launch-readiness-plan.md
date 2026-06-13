@@ -10,7 +10,7 @@ Definition:
 Business meaning:
 - We are not launching the store yet.
 - We are preparing the backend conditions that must exist before launch.
-- The current launch assumption is United States first, then additional countries after product safety, tax, shipping, returns, and labelling checks.
+- The confirmed launch market set is United States and United Kingdom, with country-specific backend gates before products can sell in either market.
 
 Definition:
 - Launch assumption: a working decision used to move planning forward until the user confirms or changes it.
@@ -19,7 +19,7 @@ Definition:
 
 | Area | Working Assumption | Why |
 |---|---|---|
-| First launch country | United States | Simplifies tax, fulfilment, compliance review, and customer support at the first stage |
+| First launch markets | United States and United Kingdom | Builds the backend with two serious markets from the start while still blocking products that are not ready by country |
 | Commerce backend | Shopify Basic | Cheapest serious platform with checkout, products, orders, payments, taxes, apps, and scale path |
 | First product type | Simple beauty accessories and selected skin-contact tools | Lower compliance burden than cosmetics, SPF, acne products, or advanced devices |
 | First supplier routes | DSers and CJdropshipping, with EPROLO/AppScenic/Syncee as backups | Lowest practical cost for early sample and fulfilment testing |
@@ -96,8 +96,9 @@ Detailed setup boundary:
 | 5 | Shopify Email and Shopify Inbox | Low-cost lifecycle and support basics |
 | 6 | Shopify Payments or approved payment route | Checkout/payment readiness |
 | 7 | Shopify Tax settings | Sales tax logic before checkout |
-| 8 | Shopify Collective or affiliate accounts | Authorized cosmetics/high-compliance testing |
-| 9 | QuickBooks/Xero and A2X later | Accounting only after transaction volume justifies it |
+| 8 | Shopify Markets | Separates US and UK market, currency, tax, shipping, and checkout behavior |
+| 9 | Shopify Collective or affiliate accounts | Authorized cosmetics/high-compliance testing |
+| 10 | QuickBooks/Xero and A2X later | Accounting only after transaction volume justifies it |
 
 Definition:
 - Pixel: a tracking connection that tells an ad platform what visitors did, such as viewing a product or buying.
@@ -119,6 +120,10 @@ Working recommendation:
 
 This plan tells the backend what must exist before launch:
 - Store record.
+- Market records for US and UK.
+- Market eligibility records for each launch product.
+- Market price records for USD and GBP.
+- Tax and duties decision records.
 - Product candidate records.
 - Product file records.
 - Supplier records.
@@ -134,15 +139,19 @@ Definition:
 ## Verification Checklist
 
 Operational verification:
-- First launch country is recorded.
+- US and UK launch markets are recorded separately.
 - Launch basket is separated from deferred product groups.
 - Supplier routes are assigned to product risk level.
 - Sample budget level is selected before supplier ordering.
 - No high-compliance product enters direct-sale launch.
+- No product can launch in a market without that market's eligibility decision.
 
 Backend verification:
 - Every product has one launch status.
 - Every product has one compliance lane.
+- Every product has US and UK eligibility fields.
+- Every product has USD and GBP pricing review before both markets are enabled.
+- Customs fields are required where cross-border shipping needs them.
 - Every direct-sale product has a sample requirement.
 - Every supplier route has a backup or escalation note.
 - Every deferred product has a reason.
@@ -158,3 +167,13 @@ Visual verification:
 ```text
 Create a launch readiness plan for this ecommerce store. Define terms in plain English. Include working assumptions, launch gates, first launch basket, deferred product groups, account setup sequence, sample budget planning, backend records, and operational/backend/visual verification checks.
 ```
+
+## Related Backend Setup
+
+The US and UK backend control plane is documented in:
+
+- `us-uk-launch-backend-setup.md`
+- `../backend-config/README.md`
+
+Definition:
+- Control plane: the rule layer that tells the business systems what is allowed, blocked, required, or waiting for proof.

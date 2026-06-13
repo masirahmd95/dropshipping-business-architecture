@@ -52,6 +52,8 @@ Branding is last because the business must first have a working operating model.
 - `docs/market-trend-scouting-2026-06.md`: current trend research across Amazon, AliExpress, TikTok Shop, Temu, Google Trends, and related signals.
 - `docs/beauty-product-validation-2026-06.md`: validation engine for the first beauty store.
 - `docs/beauty-launch-readiness-plan.md`: launch gates, first launch basket, account sequence, and sample budget planning.
+- `docs/us-uk-launch-backend-setup.md`: backend setup for United States and United Kingdom launch.
+- `backend-config/README.md`: structured backend control plane for markets, product gates, pricing, order routing, integrations, and verification.
 - `stores/README.md`: store-track index for home/kitchen utility, beauty accessories, and pet accessories.
 - `stores/beauty-accessories/top-100-product-scorecard.md`: ranked beauty product candidates and launch decisions.
 - `stores/beauty-accessories/sample-order-plan.md`: first controlled sample batch.
@@ -67,6 +69,14 @@ Branding is last because the business must first have a working operating model.
 - `workflows/order-to-fulfilment.md`: core workflow from customer checkout to supplier fulfilment.
 - `workflows/product-validation-to-launch.md`: workflow from product idea to test launch.
 - `operations/verification-standards.md`: operational, backend, and visual verification rules.
+
+Current launch markets:
+
+- United States
+- United Kingdom
+
+Definition:
+- Control plane: structured backend rules that tell the store what is allowed, blocked, required, or waiting for proof.
 
 ## Playbook Link
 

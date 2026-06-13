@@ -20,9 +20,9 @@ Launch when the business can prove:
 - How customers will receive tracking, support, returns, and refunds.
 - Whether the product page looks accurate.
 
-## Step 1: Pick A Controlled Launch Market
+## Step 1: Pick A Controlled Launch Market Set
 
-Start with one main country.
+Start with one main country or a deliberately controlled small country set.
 
 Definition:
 - Launch market: the country or region where the store first sells.
@@ -30,6 +30,7 @@ Definition:
 Why:
 - Tax, shipping, returns, compliance, delivery time, and customer expectations vary by country.
 - "Worldwide shipping" should come later, after the operating model works.
+- If starting with two countries, store product eligibility, price, tax, shipping, and compliance by country.
 
 ## Step 2: Create Launch Gates
 
@@ -85,6 +86,9 @@ For dropshipping, the starting stack should cover:
 The launch is not ready until decisions become records.
 
 Records needed:
+- Market record.
+- Market eligibility.
+- Market price.
 - Product candidate.
 - Market signal.
 - Product file.

@@ -47,6 +47,8 @@ Definition:
 
 Current beauty-store output:
 - Cheapest scalable stack selected as a working assumption: Shopify Basic, DSers/CJdropshipping sample routes, Shopify Payments where available, Shopify Tax settings, Shopify analytics, GA4, GTM, TikTok Pixel, Meta Pixel, Shopify Email, and Shopify Inbox.
+- United States and United Kingdom are now confirmed as the first launch markets.
+- US and UK backend setup files now define market records, product gates, pricing rules, order routing rules, integration status, and verification checks.
 - Paid and credential-dependent setup still requires user-controlled account creation.
 
 ## Phase 3: Data And Workflow Design
@@ -72,6 +74,7 @@ Current beauty-store output:
 - Product validation data model created.
 - Product validation to launch workflow created.
 - Product file index and sample order plan created for the first launch basket.
+- Core data model now includes market, market eligibility, market price, and tax/duties decision records.
 
 ## Phase 4: Backend Implementation
 
@@ -94,6 +97,7 @@ Definition:
 
 Current next implementation gate:
 - Create Shopify account and supplier test accounts outside Git.
+- Configure US and UK market setup from `../backend-config/`.
 - Order first sample batch.
 - Fill product files with real evidence.
 - Only then prepare Shopify product import and product-page visual verification.

@@ -28,6 +28,9 @@ This process is based on current public compliance guidance checked on 2026-06-1
 - FTC health product compliance guidance: https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance
 - European Commission product safety: https://commission.europa.eu/topics/business-and-industry/doing-business-eu/eu-product-safety-and-labelling/product-safety_en
 - European Commission CE marking: https://single-market-economy.ec.europa.eu/single-market/goods/ce-marking_en
+- GOV.UK product safety advice: https://www.gov.uk/guidance/product-safety-advice-for-businesses
+- GOV.UK cosmetic product notification: https://www.gov.uk/guidance/submit-a-cosmetic-product-notification
+- GOV.UK VAT and overseas goods: https://www.gov.uk/guidance/vat-and-overseas-goods-sold-directly-to-customers-in-the-uk
 
 ## Product File Requirement
 
@@ -223,12 +226,23 @@ Safer wording:
 Do not assume "worldwide shipping" means every product can ship everywhere on day one.
 
 Launch-country rule:
-- Start with a controlled country list.
+- Start with a controlled country list and store market eligibility by country.
 - Add countries after product files, labels, tax, shipping, returns, and local rules are checked.
 
-Recommended first country set:
-- United States first.
-- Add United Kingdom and European Union only after GPSR, product safety, labeling, tax, and responsible-person checks are handled.
+Confirmed first country set:
+- United States.
+- United Kingdom.
+
+US and UK launch does not mean every product can launch in both countries.
+
+Backend rule:
+- Every product needs `market_eligibility_us`.
+- Every product needs `market_eligibility_gb`.
+- A product can be direct-sale in one market and blocked, prepare-only, or affiliate-only in another.
+
+UK-specific note:
+- Great Britain cosmetic products require a responsible-person and notification route before direct-sale cosmetics are placed on the market.
+- Northern Ireland can differ for cosmetics, so cosmetics remain blocked for NI until reviewed.
 
 Definition:
 - Responsible person: a legally responsible business or person named for regulatory purposes in a market.

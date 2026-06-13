@@ -35,6 +35,7 @@ Definitions:
 | Area | Recommended Direction | Candidate Providers Or Tools | Decision Needed From User |
 |---|---|---|---|
 | Ecommerce platform | Use a scalable commerce platform first | Shopify, Shopify Plus later if needed | Confirm Shopify or another platform |
+| Market setup | Separate US and UK rules inside the commerce backend | Shopify Markets, market-specific pricing, market-specific shipping, market-specific tax settings | US and UK confirmed as launch markets |
 | Multi-store management | Use one architecture template with separate store configurations | Shopify separate stores later, shared Codex docs now, shared reporting template, store ID tagging | Confirm whether each niche will become a separate legal/brand/storefront entity |
 | Market intelligence | Track demand signals before niche and product approval | Amazon Best Sellers/Product Opportunity Explorer, Google Trends, TikTok Creative Center, TikTok Shop Seller Center, AliExpress supplier research, DSers, AutoDS, Temu competitor checks, Pinterest Trends, Shopify trend reports | Confirm budget for paid research tools |
 | Product compliance | Add a required product approval gate before products go live | Shopify metafields, product tags, approval workflow, supplier document storage, optional legal/IP review | Confirm whether any official licensed merchandise will be pursued |
@@ -42,8 +43,9 @@ Definitions:
 | Product enrichment | Use AI-assisted internal workflow plus human approval | Codex workflow, Shopify product data, possible PIM later | Confirm product approval process |
 | Payments | Use platform-native payments where possible; Stripe if custom/headless | Shopify Payments, Stripe | Confirm store country and payment provider access |
 | Fraud | Use payment/platform fraud tools plus manual review rules | Stripe Radar, Shopify fraud analysis, manual review queue | Confirm risk tolerance |
-| Tax | Use automated tax calculation, not manual spreadsheets | Shopify Tax, Stripe Tax, Avalara, TaxJar | Confirm selling countries and business registration |
-| Shipping rules | Use platform rules plus supplier shipping data | Shopify shipping profiles, supplier shipping tables, carrier tracking tool | Confirm target markets |
+| Tax | Use automated tax calculation, not manual spreadsheets | Shopify Tax, Stripe Tax, Avalara, TaxJar | Confirm business registration, US sales tax nexus, and UK VAT approach |
+| Duties and import taxes | Require product customs fields before cross-border checkout | Shopify duties and import taxes, HS codes, country-of-origin fields, carrier/DDP support | Confirm supplier origin countries and duty handling |
+| Shipping rules | Use platform rules plus supplier shipping data | Shopify shipping profiles, supplier shipping tables, carrier tracking tool | Confirm US and UK supplier coverage |
 | Tracking | Centralize tracking updates | AfterShip, Track123, supplier tracking API, Shopify order status | Confirm supplier tracking quality |
 | Returns | Use return workflow software if volume grows | Loop Returns, AfterShip Returns, ReturnGO, Shopify returns | Confirm return policy |
 | Support | Use ecommerce-aware support desk | Gorgias, Zendesk, Intercom, Shopify Inbox for early stage | Confirm support channel preference |
@@ -71,11 +73,11 @@ Definitions:
 
 Use this as the first working stack unless the user provides different integrations:
 
-1. Shopify for commerce backend, product catalogue, checkout, orders, and customer accounts.
+1. Shopify for commerce backend, product catalogue, checkout, orders, customer accounts, and US/UK market setup.
 2. Shopify app or direct supplier feed for product import, inventory, and fulfilment.
 3. Shopify Payments where available, or Stripe for custom payment flows.
 4. Stripe Radar or platform fraud checks for risk screening.
-5. Shopify Tax, Stripe Tax, Avalara, or TaxJar depending on country and scale.
+5. Shopify Tax, Stripe Tax, Avalara, or TaxJar depending on country, US state nexus, UK VAT position, and scale.
 6. Klaviyo or Omnisend for email lifecycle marketing.
 7. Gorgias or Zendesk for customer support once order volume justifies it.
 8. GA4, Google Tag Manager, Meta Pixel/CAPI, and TikTok Pixel for measurement.

@@ -94,6 +94,11 @@ Definition:
 For each sample:
 - Product candidate record.
 - Product file record.
+- US market eligibility record.
+- UK market eligibility record.
+- USD price review record.
+- GBP price review record.
+- Customs field record where needed.
 - Supplier route record.
 - Sample test record.
 - Pricing review record.
@@ -106,12 +111,15 @@ For each sample:
 Operational verification:
 - 15 product files exist or are planned.
 - Every sample has primary and backup supplier route.
+- Every sample has US and UK eligibility pending until proof is complete.
 - Every sample has product-specific inspection criteria.
 - Failed samples create a decision, not a vague note.
 
 Backend verification:
 - Sample IDs connect to candidate IDs.
 - Supplier route and product file are linked.
+- Market eligibility records connect to product file IDs.
+- USD and GBP pricing review records connect to sample results.
 - Sample status uses controlled labels.
 - Sample results are stored before launch decision.
 

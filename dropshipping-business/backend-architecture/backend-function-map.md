@@ -12,6 +12,7 @@ Definition:
 | Domain | Business Job | Required Functions |
 |---|---|---|
 | Store management | Keep multiple stores separated and comparable | Store ID, store configuration, store status, store-specific rules, shared reporting structure |
+| Market setup | Keep countries, currencies, tax, duties, shipping, and product eligibility separated | Market ID, market currency, market eligibility, market price, tax registration status, duties/import rule |
 | Market intelligence | Decide what is worth testing before importing products | Trend capture, demand signal scoring, competitor price checks, supplier depth checks, niche decision records |
 | Product catalogue | Control what the store sells | Product import, product enrichment, category mapping, images, variants, product status |
 | Product compliance | Prevent risky products from reaching the storefront | Product file, sample test, claim review, IP risk review, authorization evidence, allowed territory, allowed channel, publication approval |
@@ -47,17 +48,21 @@ Definitions:
 - IP risk review: checking whether a product may use protected names, logos, designs, people, teams, leagues, events, or brands without permission.
 - Demand signal scoring: comparing evidence from platforms such as Amazon, TikTok Shop, Temu, AliExpress, Google Trends, and supplier data before choosing products.
 - Store configuration: settings that define how one store behaves while using the shared backend architecture.
+- Market setup: configuring each launch country so products, prices, orders, tax, shipping, and compliance behave correctly by market.
 
 ## Core Event Chain
 
 ```text
 Store configuration selected
+-> launch market selected
 -> market signal captured
 -> product candidate created
 -> demand, price floor, supplier depth, and compliance risk scored
 -> sample order decision made
 -> product file opened
 -> sample received and inspected
+-> market eligibility approved or blocked
+-> market price approved
 -> product claims approved or blocked
 -> supplier product data received
 -> product enriched
@@ -69,7 +74,7 @@ Store configuration selected
 -> customer adds to cart
 -> customer checks out
 -> payment is authorized or captured
--> fraud and tax logic runs
+-> fraud, market, customs, and tax logic runs
 -> order record is created
 -> order is routed to supplier
 -> supplier confirms fulfilment
@@ -100,6 +105,7 @@ The architecture should support these from the start:
 - Refunds and returns connected to finance records.
 - Marketing events connected to customer behaviour.
 - Reporting by product, supplier, channel, country, and margin.
+- US and UK market rules from the start, with a path to add more countries later.
 
 Definition:
 - Supplier fallback: using a backup supplier when the preferred supplier cannot fulfil an order.
