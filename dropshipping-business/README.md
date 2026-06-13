@@ -51,14 +51,21 @@ Branding is last because the business must first have a working operating model.
 - `backend-architecture/multi-store-backend-architecture.md`: shared backend blueprint for running the three store tracks.
 - `docs/market-trend-scouting-2026-06.md`: current trend research across Amazon, AliExpress, TikTok Shop, Temu, Google Trends, and related signals.
 - `docs/beauty-product-validation-2026-06.md`: validation engine for the first beauty store.
+- `docs/beauty-launch-readiness-plan.md`: launch gates, first launch basket, account sequence, and sample budget planning.
 - `stores/README.md`: store-track index for home/kitchen utility, beauty accessories, and pet accessories.
 - `stores/beauty-accessories/top-100-product-scorecard.md`: ranked beauty product candidates and launch decisions.
+- `stores/beauty-accessories/sample-order-plan.md`: first controlled sample batch.
+- `stores/beauty-accessories/product-files/product-file-index.md`: proof status for first launch products.
 - `operations/product-compliance-testing.md`: product-file, claims, sample-testing, complaint, and recall process.
 - `operations/product-file-template.md`: reusable product proof template.
+- `operations/account-setup-checklist.md`: safe setup boundary for Shopify, supplier, payment, analytics, and support accounts.
 - `integrations/recommended-integrations.md`: integration categories, recommended candidates, and user decisions needed.
 - `integrations/beauty-supplier-shortlist-2026-06.md`: supplier routes for beauty products.
+- `integrations/cheapest-scalable-backend-stack-2026-06.md`: cheapest serious backend stack and upgrade triggers.
 - `data-models/core-data-model.md`: the business memory for products, suppliers, orders, payments, tracking, returns, and reporting.
+- `data-models/product-validation-data-model.md`: records needed to turn product validation into a backend workflow.
 - `workflows/order-to-fulfilment.md`: core workflow from customer checkout to supplier fulfilment.
+- `workflows/product-validation-to-launch.md`: workflow from product idea to test launch.
 - `operations/verification-standards.md`: operational, backend, and visual verification rules.
 
 ## Playbook Link

@@ -1,0 +1,120 @@
+# Cheapest Scalable Backend Stack - June 2026
+
+## Purpose
+
+This document records the cheapest serious backend stack for launching the beauty dropshipping store without blocking future scale.
+
+Definition:
+- Backend stack: the set of tools that run the hidden operations of the business.
+
+Business meaning:
+- The goal is not to buy the most software.
+- The goal is to start with enough infrastructure to sell safely, track performance, support customers, and scale later.
+
+## Decision
+
+Use a Shopify-centered backend with low-cost native tools first, then upgrade only when volume justifies it.
+
+Definition:
+- Native tool: a tool already built into the main platform or officially connected to it.
+
+## Recommended Starting Stack
+
+| Business Function | Starting Tool | Why This Is The Cheapest Serious Choice | Upgrade Trigger |
+|---|---|---|---|
+| Commerce backend | Shopify Basic | Products, checkout, orders, payments, tax settings, app ecosystem, and scale path | Upgrade to Grow when staff/team or fee economics justify it |
+| Supplier import and fulfilment | DSers and CJdropshipping test routes | Free or low-cost entry and strong Shopify app presence | Add AppScenic/Syncee/Spocket when supplier quality or shipping region requires it |
+| Authorized no-inventory products | Shopify Collective where eligible | Brand-direct route without buying stock | Use direct brand partnerships when store has traction |
+| High-compliance product testing | TikTok Shop affiliate or Amazon Associates | Tests demand without direct compliance burden | Direct sale only after product file and authorization proof |
+| Payments | Shopify Payments if available | Reduces third-party complexity and supports Shopify features | Stripe/custom route only if platform or country requires it |
+| Tax | Shopify Tax settings first | Built into Shopify and adequate for early controlled launch | Avalara/TaxJar/accountant-led setup when multi-state/country complexity grows |
+| Fraud | Shopify fraud analysis plus manual review rules | Built into commerce flow | Add stricter rules when chargeback risk rises |
+| Analytics | Shopify analytics, GA4, Google Tag Manager | Low-cost measurement foundation | Add data warehouse when reporting becomes multi-channel and manual |
+| Paid social tracking | TikTok Pixel and Meta Pixel | Required before social ads | Add server-side tracking later if ad scale justifies it |
+| Product feeds | Google Merchant Center, Meta Catalog, TikTok Catalog | Needed for shopping/social catalog distribution | Add feed-management app if catalog complexity grows |
+| Email | Shopify Email first | Low-cost early lifecycle messaging | Klaviyo when segmentation and revenue justify it |
+| Support | Shopify Inbox first | Low-cost customer support | Gorgias/Zendesk when support volume grows |
+| Reviews | Judge.me or Shopify-compatible review app later | Reviews matter after fulfilment is reliable | Add after first orders and delivery proof |
+| Accounting | Shopify exports first | Avoids monthly cost before sales | QuickBooks/Xero plus A2X when payouts/fees/refunds become hard to reconcile |
+| Automation | Shopify Flow if plan allows, otherwise manual SOPs and Make/Zapier later | Avoids premature automation spend | Add Make/Zapier/n8n after repeated manual tasks appear |
+| Monitoring | Shopify/admin alerts first | No custom backend yet | Sentry/Better Stack when custom code or hosted services exist |
+
+Definitions:
+- Manual review rule: a rule that sends an order or product to a human before continuing.
+- Data warehouse: a central reporting database combining data from many systems.
+- SOP: standard operating procedure; a written repeatable process.
+
+## Integrations Not Needed On Day One
+
+Do not add these until there is a clear business reason:
+- Data warehouse.
+- Custom app.
+- Advanced returns app.
+- Advanced support desk.
+- SMS marketing.
+- Enterprise tax software.
+- Paid product research tools.
+- Complex automation platform.
+
+Business reason:
+- Extra tools create cost, setup work, data mess, and maintenance before the business has proved demand.
+
+## Integration Data Flow
+
+```text
+Supplier apps
+-> Shopify products and inventory
+-> Shopify checkout and orders
+-> Payment and fraud checks
+-> Supplier fulfilment
+-> Tracking updates
+-> Customer notifications
+-> Analytics and marketing events
+-> Support and refund records
+-> Accounting export
+```
+
+Definition:
+- Data flow: the path information follows through the business systems.
+
+## User Inputs Needed Before Account Setup
+
+Before live setup, confirm:
+- First launch country.
+- Business legal name and country.
+- Shopify account email.
+- Payment provider availability.
+- Supplier app accounts.
+- Sample order budget.
+- Domain preference later.
+- Accounting software preference later.
+
+No secrets should be committed to this repository.
+
+Definition:
+- Secret: private access information such as passwords, API keys, tokens, or payment credentials.
+
+## Verification Checklist
+
+Operational verification:
+- Every starting tool has a business function.
+- No paid upgrade is added without trigger.
+- Supplier tools are matched to product risk.
+- High-compliance products use affiliate or authorized route.
+
+Backend verification:
+- Each system owns a clear responsibility.
+- Data flow is documented.
+- No duplicate tools are chosen for the same job without reason.
+- No credentials are stored in files.
+
+Visual verification:
+- Shopify admin, product pages, checkout, emails, and support views must be checked when configured.
+- Tracking pixels must not affect visible layout.
+- Product feed output must show correct images, titles, prices, and availability.
+
+## Reusable Codex Prompt
+
+```text
+Choose the cheapest scalable backend stack for this ecommerce business. Define terms in plain English. Map each business function to a starting tool, explain why it is enough for launch, define upgrade triggers, show data flow, list user inputs needed, and include operational/backend/visual verification.
+```

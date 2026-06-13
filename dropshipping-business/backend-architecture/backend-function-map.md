@@ -14,7 +14,7 @@ Definition:
 | Store management | Keep multiple stores separated and comparable | Store ID, store configuration, store status, store-specific rules, shared reporting structure |
 | Market intelligence | Decide what is worth testing before importing products | Trend capture, demand signal scoring, competitor price checks, supplier depth checks, niche decision records |
 | Product catalogue | Control what the store sells | Product import, product enrichment, category mapping, images, variants, product status |
-| Product compliance | Prevent risky products from reaching the storefront | IP risk review, authorization evidence, allowed territory, allowed channel, publication approval |
+| Product compliance | Prevent risky products from reaching the storefront | Product file, sample test, claim review, IP risk review, authorization evidence, allowed territory, allowed channel, publication approval |
 | Supplier management | Know who fulfils each product | Supplier profiles, supplier cost, fulfilment rules, reliability tracking, supplier priority |
 | Inventory | Avoid selling unavailable items | Stock sync, safety buffers, stockout handling, backorder rules |
 | Pricing | Protect margin | Cost tracking, markup rules, sale pricing, currency rules, fee allowance |
@@ -56,9 +56,13 @@ Store configuration selected
 -> product candidate created
 -> demand, price floor, supplier depth, and compliance risk scored
 -> sample order decision made
+-> product file opened
+-> sample received and inspected
+-> product claims approved or blocked
 -> supplier product data received
 -> product enriched
 -> product compliance review completed
+-> product page visual verification completed
 -> product approved
 -> product published to store
 -> customer views product

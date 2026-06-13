@@ -17,6 +17,10 @@ Definition:
 | Product Candidate | Product idea being researched before store import | candidate name, niche cluster, customer problem, platform signals, Temu price floor, supplier count, estimated landed cost, target price, visual demo score, decision status |
 | Product | Item sold in the store | title, description, category, status, supplier, images, SEO fields, publication status |
 | Product Compliance Review | Product approval record before publication | product, supplier, authorization status, IP risk level, protected marks detected, evidence link, allowed territories, allowed channels, reviewer, decision |
+| Product File | Proof folder for a product before sale | product file ID, candidate, supplier, compliance lane, evidence status, missing evidence, approval status |
+| Sample Test | Physical sample inspection | sample ID, candidate, supplier, order date, delivery date, result, defect notes, visual notes |
+| Product Claim | Approved or blocked wording for product pages, ads, and creator scripts | candidate, claim text, claim type, status, evidence, notes |
+| Visual Verification | Check that product pages and admin screens look accurate | candidate/product, screen, viewport, status, issue, reviewer |
 | Variant | Sellable version of a product | SKU, option values, price, compare-at price, cost, weight, barcode |
 | Supplier | Company or platform that fulfils products | name, contact, API type, reliability score, shipping regions, authorization evidence |
 | Supplier Product | Supplier-side product record | supplier SKU, supplier cost, supplier stock, processing time, source URL, authorization status |
@@ -64,7 +68,11 @@ Store
 ```text
 Market Signal
 -> Product Candidate
+-> Product File
+-> Sample Test
+-> Product Claim
 -> Product Compliance Review
+-> Visual Verification
 -> Product / Variant
 ```
 
@@ -106,6 +114,9 @@ Definition:
 - A product candidate should have at least three demand signals before sample ordering unless the user marks it as an experimental test.
 - A product candidate must include price floor, estimated landed cost, target price, compliance risk, return risk, and visual demo score.
 - A product cannot go live without a product compliance review.
+- A direct-sale product cannot go live without a product file and sample-test result unless explicitly approved as a limited test.
+- A product page cannot use claims that are not approved in Product Claim records.
+- A product cannot pass visual verification if images, sizing, materials, usage, warnings, or pack contents are misleading.
 - A product with blocked IP risk cannot be published, advertised, or routed to checkout.
 - A licensed product cannot go live without authorization evidence, allowed territory, and allowed channel records.
 - A variant cannot go live without SKU, supplier SKU, price, cost, and inventory rule.

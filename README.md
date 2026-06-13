@@ -35,9 +35,13 @@ Definition:
 The current validation documents are:
 
 - `dropshipping-business/docs/beauty-product-validation-2026-06.md`
+- `dropshipping-business/docs/beauty-launch-readiness-plan.md`
 - `dropshipping-business/stores/beauty-accessories/top-100-product-scorecard.md`
+- `dropshipping-business/stores/beauty-accessories/sample-order-plan.md`
+- `dropshipping-business/stores/beauty-accessories/product-files/product-file-index.md`
 - `dropshipping-business/operations/product-compliance-testing.md`
 - `dropshipping-business/integrations/beauty-supplier-shortlist-2026-06.md`
+- `dropshipping-business/integrations/cheapest-scalable-backend-stack-2026-06.md`
 
 The wider backend architecture still includes:
 

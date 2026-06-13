@@ -22,7 +22,7 @@ Definition:
 
 | Area | Status | Current Default | User Input Needed | Notes |
 |---|---|---|---|---|
-| Ecommerce platform | Pending | Shopify | Confirm platform and country | Affects nearly every other decision |
+| Ecommerce platform | Working assumption | Shopify Basic | Confirm platform, store country, and account setup | Affects nearly every other decision |
 | Multi-store setup | Active rule | Three store tracks share one backend architecture with separate store configurations | Confirm whether stores will be separate Shopify accounts/domains later | Prevents a messy general store while reusing the same operating system |
 | Market intelligence | Active rule | Validate niche using Amazon, AliExpress, TikTok Shop, Temu, Google Trends, and supplier signals before product import | Confirm whether paid tools such as Jungle Scout, Helium 10, AutoDS, or Similarweb are approved | Prevents choosing products from hype alone |
 | Product compliance | Active rule | Beauty products are separated into simple accessories, skin-contact tools, cosmetics, electrical tools, and high-compliance products | Approve launch countries and supplier document requirements | Prevents unsafe products, risky claims, payment issues, and platform problems |
@@ -40,6 +40,7 @@ Definition:
 | Accounting | Pending | Xero or QuickBooks plus A2X if needed | Confirm accounting software | Needed for clean finance records |
 | Data warehouse | Pending | Defer until reporting complexity justifies it | Confirm reporting ambition and budget | Useful after volume or multi-channel data grows |
 | Monitoring | Pending | Platform alerts; Sentry/Better Stack if custom backend exists | Confirm custom services | Needed for hosted custom code |
+| Cheapest scalable stack | Working assumption | Shopify Basic, DSers/CJdropshipping, Shopify Payments, Shopify Tax, GA4, GTM, TikTok Pixel, Meta Pixel, Shopify Email, Shopify Inbox | Confirm first launch country and account setup | Keeps launch cost low without blocking scale |
 
 Definitions:
 - Jurisdiction: a country, state, or region with its own legal or tax rules.

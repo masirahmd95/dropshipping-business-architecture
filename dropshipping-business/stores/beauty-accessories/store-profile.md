@@ -77,7 +77,10 @@ Definition:
 ## Related Validation Documents
 
 - `../../docs/beauty-product-validation-2026-06.md`: validation engine and launch rules.
+- `../../docs/beauty-launch-readiness-plan.md`: launch gates and first launch assumptions.
 - `top-100-product-scorecard.md`: ranked product candidates and launch decisions.
+- `sample-order-plan.md`: first controlled sample batch.
+- `product-files/product-file-index.md`: first product proof files.
 - `../../operations/product-compliance-testing.md`: product-file and compliance testing process.
 - `../../integrations/beauty-supplier-shortlist-2026-06.md`: supplier routes and checks.
 
